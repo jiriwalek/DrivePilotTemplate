@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">walekj</field>
+    <field id="created">2014-04-17 16:29:47.882 +0200</field>
+    <field id="derivedFromLinkRole">relates_to</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=DP-501"></h1><div id="polarion_wiki macro name=toc"></div><p id="polarion_1"></p><h2 id="polarion_wiki macro name=module-workitem;params=id=DP-535"></h2><p id="polarion_2">
+  2314234
+</p><p id="polarion_template_1">
+  THIS DOCUMENT HAS NO CONTENT YET.
+</p><p id="polarion_template_2">
+  YOU CAN CREATE AND SAVE CONTENT NOW USING THIS EDITOR.
+</p>]]></field>
+    <field id="outlineNumbering">
+        <struct/>
+    </field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">System Requirement</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">severity</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">systemRequirement</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">inreview</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">req_specification</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

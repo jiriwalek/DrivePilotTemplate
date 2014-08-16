@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130502133303</created>
+<type>content</type>
+<content><![CDATA[###### PARAMETERS #################################################################################
+{parameter:reqtype|type=enum:workitem-type|multi=true|value=systemRequirement,softwareRequirement,mechanicalRequirement,electricalRequirement|allow-no-value=false}
+{parameter:status|type=enum:systemRequirement-status|value=approved|allow-no-value=true}
+{parameter:version|type=enum:@plan[template.id:release]|value=Version_2_0|allow-no-value=true}
+
+###### FORM #################################################################################
+<div style="background-color:\#E1F0FF;padding:5px;">
+{parameter-form}
+<table cellpadding="3" style="background-color:\#E1F0FF">
+<tr><td width=150 align=right>Requirement Item Types:</td><td>{parameter-editor:reqtype|width=500px}</td></tr>
+<tr><td width=150 align=right>Status:</td><td >{parameter-editor:status|width=185}</td></tr>
+<tr><td width=150 align=right>Version:</td><td>{parameter-editor:version|width=185} </td></tr>
+</table>
+{parameter-form-submit}
+{parameter-form-save} 
+{parameter-form}
+</div>
+
+###### SETUP VARIABLES ######################################################################
+#set($verifiesLinkRole = "verifies")
+#set($reqTypes = $pageParameters.getAsString("reqtype", " "))
+#set($rQuery = "project.id:$page.project AND type:($reqTypes)")
+#if($pageParameters.version)
+#set($rQuery = "$rQuery AND targetVersion.KEY:$pageParameters.version.id")
+#end
+#if($pageParameters.status)
+#set($rQuery = "$rQuery AND status:$pageParameters.status.id")
+#end
+#set($dataService = $trackerService.getDataService()) 
+##
+###################################################################################
+##
+{style:type=div|color=grey|text-align=right}
+Reported by $trackerService.getTrackerUser($securityService.getCurrentUser()).name\\
+$calendarTool.getCalendarInstance().time
+{style}
+
+1 Requirements- Test Case Coverage 
+Displays statistics about test coverage for selected requirements, i.e. the ratio of requirements linked  and not linked by verification test cases. Requirements without linked verification test cases are also listed in detailed table below.
+
+#set($sqlCovered="SELECT REQ.C_PK FROM LUCENE_QUERY('WorkItem', '$rQuery', 'id') REQ WHERE EXISTS (SELECT TEST.C_PK FROM WORKITEM TEST, STRUCT_WORKITEM_LINKEDWORKITEMS LINK WHERE LINK.FK_WORKITEM = REQ.C_PK AND LINK.FK_P_WORKITEM = TEST.C_PK AND LINK.C_ROLE = '$verifiesLinkRole')") 
+
+#set($sqlUncovered="SELECT REQ.C_PK FROM LUCENE_QUERY('WorkItem', '$rQuery', 'id') REQ WHERE NOT EXISTS (SELECT TEST.C_PK FROM WORKITEM TEST, STRUCT_WORKITEM_LINKEDWORKITEMS LINK WHERE LINK.FK_WORKITEM = REQ.C_PK AND LINK.FK_P_WORKITEM = TEST.C_PK AND LINK.C_ROLE = '$verifiesLinkRole')")
+ 
+#set($covered_items = $dataService.sqlSearch($sqlCovered)) 
+#set($covered_result = $covered_items.size()) 
+#set($uncovered_items = $dataService.sqlSearch($sqlUncovered)) 
+#set($uncovered_result = $uncovered_items.size()) 
+ 
+<table><tr><td> 
+#highchartStart("" "Pie2D" 150 150  )
+#set($highchartColors = ["95d55c","d43d3d","b566d4","cfcfcf"])
+#addHighchartPieDataSet("" "'Covered',$covered_result:'Uncovered', $uncovered_result")
+#addHighchartAdditionalOptions("options.plotOptions = {pie:{dataLabels: {enabled:false},borderWidth:0,animation:false}};")
+#addHighchartAdditionalOptions("options.tooltip= {formatter: function(){ return  ''+ this.point.name + ': <b>'+ this.y + '</b>' }};")
+#highchartEnd()
+</td><td style="padding:20px"> 
+There are *$uncovered_result Requirements* without verifying test cases. 
+</td> </tr> </table> 
+ 
+1.1 Requirements without Test Cases
+<center>
+{workitems:sqlQuery=$sqlUncovered|fields=id,title,status|width=80%}
+</center>
+
+1.1 Requirements with Test Cases
+<center>
+{workitems:sqlQuery=$sqlCovered|fields=id,title,status|width=80%|expand=no}
+</center>]]></content>
+</wiki-page>

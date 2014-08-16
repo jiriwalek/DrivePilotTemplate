@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">walekj</field>
+    <field id="created">2014-08-15 20:59:38.675 +0200</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=DP-541"></h1><div id="polarion_editor_html_block1" class="polarion-dle-wiki-block">
+  <div id="polarion_editor_html_block_content" contentEditable="false"></div><pre id="polarion_editor_html_block_source" class="polarion-dle-wiki-block-source" contentEditable="false">{includeForm:_default.document_intro}
+#documentPanel(true true "approved")
+</pre>
+</div><p id="polarion_2"></p><div id="polarion_wiki macro name=module-workitem;params=id=DP-539"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-540"></div><p id="polarion_template_1">
+  THIS DOCUMENT HAdsadasS NO CONTENT YET.
+</p><p id="polarion_template_2">
+  YOU CAN CREATE AND SAVE CONTENT NOW USING THIS EDITOR.
+</p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">System Requirement</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">status</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">systemRequirement</item>
+            </struct>
+        </list>
+    </field>
+    <field id="signatureContexts">
+        <list>
+            <struct>
+                <item id="signatures">
+                    <list>
+                        <struct>
+                            <item id="signedBy">aSeller</item>
+                            <item id="signerRole">Customer </item>
+                            <item id="verdict">pending</item>
+                        </struct>
+                        <struct>
+                            <item id="signedBy">rProject</item>
+                            <item id="signedRevision">18657</item>
+                            <item id="signerRole">Product Owner</item>
+                            <item id="verdict">signed</item>
+                            <item id="verdictTime">2014-08-15 21:12:05.345 +0200</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="targetStatusId">reviewed</item>
+                <item id="transitionDataRevision">18660</item>
+            </struct>
+            <struct>
+                <item id="signatures">
+                    <list>
+                        <struct>
+                            <item id="signedBy">aSeller</item>
+                            <item id="signerRole">Customer</item>
+                            <item id="verdict">pending</item>
+                        </struct>
+                        <struct>
+                            <item id="signedBy">rProject</item>
+                            <item id="signedRevision">18663</item>
+                            <item id="verdict">signed</item>
+                            <item id="verdictTime">2014-08-16 03:22:34.188 +0200</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="targetStatusId">approved</item>
+            </struct>
+            <struct>
+                <item id="signatures">
+                    <list>
+                        <struct>
+                            <item id="signedBy">rProject</item>
+                            <item id="signedRevision">18675</item>
+                            <item id="signerRole">Product Owner</item>
+                            <item id="verdict">signed</item>
+                            <item id="verdictTime">2014-08-16 03:36:35.859 +0200</item>
+                        </struct>
+                        <struct>
+                            <item id="signedBy">aSeller</item>
+                            <item id="signerRole">Customer</item>
+                            <item id="verdict">pending</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="targetStatusId">reviewed</item>
+                <item id="transitionDataRevision">18677</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">reviewed</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="title">System Specification</field>
+    <field id="type">req_specification</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

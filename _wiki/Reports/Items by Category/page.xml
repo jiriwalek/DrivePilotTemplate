@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130419180250</created>
+<type>content</type>
+<content><![CDATA[### PARAM ###############
+{parameter:wiTypes|type=enum:workitem-type|value=systemRequirement,softwareRequirement,mechanicalRequirement,electricalRequirement|allow-no-value=false|multi=true}
+{parameter:resolved|type=boolean|value=false}
+### VAR ###############
+#set($baseQuery="project.id:$page.project")
+#set($typeQ="")
+#set($op="type:(")
+#foreach($t in $pageParameters.wiTypes)
+  #set($typeQ = "${typeQ}${op}$t.id")
+  #set($op=" ")
+#end
+#if($typeQ.length()>0)
+  #set($typeQ = "${typeQ})")
+  #set($baseQuery="$baseQuery AND $typeQ")
+#end
+#set($unresolved= $pageParameters.resolved)
+#set($nullQ = '######NULL')
+#if($unresolved)
+#set($baseQuery="$baseQuery AND HAS_VALUE:resolution")
+#end
+####
+<div style="background-color:\#E1F0FF;padding:5px;">
+{parameter-form}
+<table cellpadding="3" >
+<tr><td align=right style="white-space: nowrap">Types:</td><td>{parameter-editor:wiTypes|width=500}</td></tr>
+<tr><td align=right>Unresolved Only:</td><td >{parameter-editor:resolved}</td></tr>
+</table>
+{parameter-form-submit}
+{parameter-form-save} 
+{parameter-form}
+</div>
+#### REPORT ##########################
+{style:type=div|color=grey|text-align=right}
+Reported by $trackerService.getTrackerUser($securityService.getCurrentUser()).name\\
+$calendarTool.getCalendarInstance().time
+{style}
+
+1 Items by Category
+
+Displays a chart of the number of Work Items in each Work Item Category, filtered by type and resolution status. 
+
+#if($trackerService.dataService.getInstancesCount("WorkItem","$baseQuery")<0)
+No data available
+#else
+#if($trackerService.getTrackerProject("$page.project").getCategories().isEmpty())
+No categories
+#else
+#highchartStart("Items By Category " "" 500 400 )
+#set($highchartColors = ["777777", "1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900","1941A5","AFD8F8","F6BD0F","8BBA00","A66EDD","F984A1","CCCC00","999999","0099CC","FF0000","006F00","0099FF","FF66CC","669966","7C7CB4","FF9933","9900FF","99FFCC","CCCCFF","669900"])
+#set($count = $trackerService.dataService.getInstancesCount("WorkItem","$baseQuery AND NOT HAS_VALUE:categories.id"))
+#set($data = "'Un-categorized' , $count")
+#foreach($c in $trackerService.getTrackerProject("$page.project").getCategories())
+#set($count = $trackerService.dataService.getInstancesCount("WorkItem","$baseQuery AND categories.id:$c.id"))
+#if($count>0)#set($data = "$data : '$c.name' , $count")#end
+#end
+#addHighchartPieDataSet("Items" "$data")
+#addHighchartAdditionalOptions("options.plotOptions = {pie:{animation:false}};")
+#addHighchartAdditionalOptions("options.tooltip= {formatter: function(){ return  ''+ this.point.name + ': <b>'+ this.y + '</b>' }};")
+#highchartEnd()
+
+* Un-categorized : {workitems:$baseQuery AND NOT HAS_VALUE:categories.id|display=count}
+#foreach($c in $trackerService.getTrackerProject("$page.project").getCategories())
+* $c.name: {workitems:$baseQuery AND categories.id:$c.id|display=count}
+#end
+
+#end
+#end]]></content>
+</wiki-page>

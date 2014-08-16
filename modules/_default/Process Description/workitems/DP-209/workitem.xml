@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="type">task</field>
+    <field id="author">admin</field>
+    <field id="title">Document your plan to validate and verify system requirements</field>
+    <field id="created">2013-01-09 22:59:55.165 +0100</field>
+    <field id="description" text-type="text/html">Outline the approach, expectations and planned tasks to validate and verify system requirements. Fill in the &lt;span id="WIKI_LINK:Requirements.System%20Validation%20and%20Verification%20Plan|System Validation and Verification Plan document"&gt;&lt;/span&gt; in the Requirements space, or, if you have this plan in a Word document, import it replacing the existing document, or creating a new document with a different name. In the latter case, be sure to link the new document in the OUTPUT section of the Requirements home page.</field>
+    <field id="priority">50.0</field>
+    <field id="status">open</field>
+    <field id="severity">normal</field>
+</work-item>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130102160945</created>
+<type>content</type>
+<content><![CDATA[{includeForm:_default.ProjectMacros}
+1 Requirements By Status
+
+{parameter:version|type=enum:@plan[template.id:release]|value=|allow-no-value=true}
+{parameter-form}
+Version: {parameter-editor:version|width=185} {parameter-form-submit} {parameter-form-save}
+{parameter-form}
+#set($rQuery="")
+#if($pageParameters.version)
+#set($rQuery = "AND targetVersion.KEY:$pageParameters.version.id")
+#end
+
+
+{table:header=no}
+#ScoreBoard($page.project "systemRequirement" "$rQuery")
+{table}]]></content>
+</wiki-page>

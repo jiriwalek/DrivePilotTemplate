@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">kelleroval</field>
+    <field id="created">2014-06-03 11:01:48.785 +0200</field>
+    <field id="derivedFromLinkRole">relates_to</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=DP-505"></h1><p id="polarion_1">
+   A <span style="font-weight: bold;">pilot</span> or <span style="font-weight: bold;">aviator</span> is a person actively involved in flying an <a href="http://en.wikipedia.org/wiki/Aircraft">aircraft</a>. <span style="font-style: italic;">Pilot</span> is a somewhat more precise term, as the pilot by definition directly controls the aircraft whereas the slightly broader term <span style="font-style: italic;">aviator</span> is a person who, though actively involved in <a href="http://en.wikipedia.org/wiki/Flight">flying</a> the aircraft (whether plane, rotary-wing, powered or unpowered), does not necessarily directly control its path. People who fly aboard an aircraft who are not involved in the aircraft&#39;s flight systems, such as passengers and cabin crew, are not generally considered aviators, but crew such as <a href="http://en.wikipedia.org/wiki/Navigator">navigators</a>, and <a href="http://en.wikipedia.org/wiki/Flight_engineer">flight engineers</a> are generally included.<sup>[<span style="font-style: italic;"><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed">citation needed</a></span>]</sup><br/>
+  To ensure the safety of people in the air and on the ground, early <a href="http://en.wikipedia.org/wiki/Aviation">aviation</a> soon required that aircraft be under the operational control of a properly trained, certified pilot at all times, who is responsible for the safe and legal completion of the flight. The <a href="http://en.wikipedia.org/wiki/A%C3%A9ro-Club_de_France">Aéro-Club de France</a> delivered the first certificate to <a href="http://en.wikipedia.org/wiki/Louis_Bl%C3%A9riot">Louis Blériot</a> in 1908—followed by <a href="http://en.wikipedia.org/wiki/Glenn_Curtiss">Glenn Curtiss</a>, <a href="http://en.wikipedia.org/wiki/L%C3%A9on_Delagrange">Léon Delagrange</a>, and <a href="http://en.wikipedia.org/wiki/Robert_Esnault-Pelterie">Robert Esnault-Pelterie</a>. The absolute authority given to the &quot;<a href="http://en.wikipedia.org/wiki/Pilot_in_command">pilot in command</a>&quot; derives from that of a ship&#39;s captain.<sup>[<span style="font-style: italic;"><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed">citation needed</a></span>]</sup><br/>
+  In recognition of the pilots&#39; qualifications and responsibilities, most militaries and many airlines worldwide award <a href="http://en.wikipedia.org/wiki/Aviator_badge">aviator badges</a> to their pilots, as well as other <a href="http://en.wikipedia.org/wiki/Aircrew">air crews</a>. This includes <a href="http://en.wikipedia.org/wiki/Naval_aviator" class="mw-redirect">naval aviators</a>.
+</p><p id="polarion_7">
+  <br/>
+  The first recorded use of the term <span style="font-style: italic;">aviator</span> (<span style="font-style: italic;">aviateur</span> in French) was in 1887, as a variation of &quot;aviation&quot;, from the Latin <span style="font-style: italic;">avis</span> (meaning <span style="font-style: italic;">bird</span>), coined in 1863 by G. de la Landelle in <span style="font-style: italic;">Aviation Ou Navigation Aérienne</span> (&quot;Aviation or Air Navigation&quot;). The term <span style="font-style: italic;">aviatrix</span> (<span style="font-style: italic;">aviatrice</span> in French), now archaic, was formerly used for a female aviator. These terms were used more in the <a href="http://en.wikipedia.org/wiki/Aviation_history" class="mw-redirect">early days of aviation</a>, before anyone had ever seen an airplane fly, and it was used to denote bravery and adventure. For example, the editors at the <span style="font-style: italic;"><a href="http://en.wikipedia.org/wiki/Dayton_Herald" class="mw-redirect">Dayton Herald</a></span>, (in an article of December 18, 1903) described the <a href="http://en.wikipedia.org/wiki/Wright_brothers">Wright brothers</a>&#39; first airplane: &quot;The weight, including the body of the <span style="font-style: italic;">aviator</span>, is slightly over 700 pounds&quot;.<sup>[<span style="font-style: italic;"><a href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed">citation needed</a></span>]</sup>
+</p><p id="polarion_6">
+  <img src="attachment:1-screenshot-20140603-161209.png" style="width: 754px;height: 502px;"/>
+</p><p id="polarion_8"></p><p id="polarion_4"></p><p id="polarion_5">
+  <br/>
+</p><p id="polarion_2"></p><p id="polarion_3"></p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">Issue</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">severity</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">issue</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">draft</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">req_specification</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130110205618</created>
+<type>content</type>
+<content><![CDATA[{includeForm:_default.ProjectMacros}
+1 Change Requests By Status
+
+{table:header=no}
+#ScoreBoard($page.project "changerequest" "")
+{table}]]></content>
+</wiki-page>

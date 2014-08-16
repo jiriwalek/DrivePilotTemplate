@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130503001322</created>
+<type>content</type>
+<content><![CDATA[###### PARAMETERS #################################################################################
+{parameter:iterations|type=enum:@plan[template.id:iteration]|multi=true|allow-no-value=false|value=Iteration_32,Iteration_33}
+
+###### FORM #################################################################################
+<div style="background-color:\#E1F0FF;padding:5px;">
+{parameter-form}
+<table cellpadding="3" style="background-color:\#E1F0FF">
+<tr><td style="white-space:nowrap;">Iterations:</td><td>{parameter-editor:iterations|width=600px} </td></tr>
+</table>
+{parameter-form-submit}
+{parameter-form-save} 
+{parameter-form}
+</div>
+
+## --- configuration start ---
+##what workitems should be analyzed
+#set($workitemsQuery= "project.id:($page.project) AND HAS_VALUE:resolution")
+##
+#set($undercolor = "red")
+#set($overcolor = "green")
+#set($link_target = "_top")
+## --- configuration end ---
+#### REPORT ##########################
+
+{style:type=div|color=grey|text-align=right}
+Reported by $trackerService.getTrackerUser($securityService.getCurrentUser()).name\\
+$calendarTool.getCalendarInstance().time
+{style}
+
+1 Estimation Quality 
+
+Analyzes Work Items checking the initial estimates and recorded time spent, and for each user reports a summary of how much they overestimate or underestimate their Work Items.
+
+* <span style='color: $undercolor'>*underestimated*</span> (red), <span style='color: $overcolor'>*overestimated*</span> (green), link  to a table of the Work Items that were anayzed.
+* !E = "done" items without Initial Estimate
+* !S = "done" items without Time Spent
+
+#set($nullq = '######NULL')
+
+#set($uQuery = "SELECT DISTINCT A.FK_URI_USER FROM REL_WORKITEM_USER_ASSIGNEE A, LUCENE_QUERY('WorkItem', '$workitemsQuery', 'id')  WI WHERE A.FK_WORKITEM = WI.C_PK")
+#set($users = $trackerService.dataService.sqlSearch($uQuery))
+
+{table}
+User #foreach($timepoint in $pageParameters.iterations) | $timepoint.name#end
+
+#foreach($user in $users)
+  #set($details = "")
+  #foreach($timepoint in $pageParameters.iterations)
+    #set($queryBasic = "$workitemsQuery AND PLAN:(${page.project}/$timepoint.id) AND assignee.id:$user.id")
+    #set($unestimatedQuery = "$queryBasic AND initialEstimate:$nullq")
+    #set($unestimatedItems = $trackerService.queryWorkItems($unestimatedQuery, "id"))
+    #set($unspentQuery = "$queryBasic AND timeSpent:$nullq")
+    #set($unspentItems = $trackerService.queryWorkItems($unspentQuery, "id"))
+    #set($correctQuery = "$queryBasic AND NOT initialEstimate:$nullq AND NOT timeSpent:$nullq")
+    #set($correctItems = $trackerService.queryWorkItems($correctQuery, "id"))
+    #set($diff = "")
+    #foreach($item in $correctItems)
+      #if($diff == "")
+        #set($wiEstimate = $item.initialEstimate)
+        #set($diff = $wiEstimate.parseDuration($wiEstimate.toString()))
+      #else
+        #set($x = $diff.add($item.initialEstimate))
+      #end
+      #set($wiSpent = $item.timeSpent)
+      #set($wiSpent = $wiSpent.parseDuration($wiSpent.toString()))
+      #set($wiSpent.negative = true)
+      #set($x = $diff.add($wiSpent))
+      #set($x = $diff.toCollapsedForm(28800000))
+    #end
+    #if($diff == "")
+      #set($detail = "-")
+    #else
+      #if($diff.negative)
+        #set($color = $undercolor)
+      #else
+        #set($color = $overcolor)
+      #end
+      #set($detail = "<span style='white-space: nowrap; color: $color;'>*$diff*</span>")
+    #end
+    #set($detail = "<a href='/polarion/#/workitems?query=$correctQuery' target='$link_target'>$detail</a><br>(!E:<a href='/polarion/#/workitems?query=$unestimatedQuery' target='$link_target'>$unestimatedItems.size()</a> !S:<a href='/polarion/#/workitems?query=$unspentQuery' target='$link_target'>$unspentItems.size()</a>)")
+    #set($details = "$details | $detail")
+  #end
+$user.name $details
+#end
+{table}
+	]]></content>
+</wiki-page>

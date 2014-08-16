@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130502135048</created>
+<type>content</type>
+<content><![CDATA[#includeForm("_default.ProjectMacros")
+###### PARAMETERS #################################################################################
+{parameter:reqtype|type=enum:workitem-type|multi=true|value=systemRequirement,softwareRequirement,mechanicalRequirement,electricalRequirement|allow-no-value=false}
+{parameter:version|type=enum:@plan[template.id:release]|value=|allow-no-value=true}
+
+###### FORM #################################################################################
+<div style="background-color:\#E1F0FF;padding:5px;">
+{parameter-form}
+<table cellpadding="3" style="background-color:\#E1F0FF">
+<tr><td width=150 align=right>Requirement Item Types:</td><td>{parameter-editor:reqtype|width=500px}</td></tr>
+<tr><td width=150 align=right>Version:</td><td>{parameter-editor:version|width=185} </td></tr>
+</table>
+{parameter-form-submit}
+{parameter-form-save} 
+{parameter-form}
+</div>
+
+###### SETUP VARIABLES ######################################################################
+#set($reqTypes = $pageParameters.getAsString("reqtype", " "))
+#set($bQuery = "project.id:$page.project AND type:($reqTypes)")
+#if($pageParameters.version)
+#set($bQuery = "$bQuery AND targetVersion.KEY:$pageParameters.version.id")
+#end
+
+#macro(showAp $status $q)#set($uQuery = "SELECT DISTINCT A.FK_URI_USER FROM STRUCT_WORKITEM_APPROVALS A, LUCENE_QUERY('WorkItem', '$q', 'id')  WI WHERE A.FK_P_WORKITEM = WI.C_PK AND A.C_STATUS='$status' ")#set($sep ="{portallink:/workitems?query=$q&sidebar=approvals| addcontext=yes}<img src='/polarion/icons/default/actions/invite_for_approval.png'/>{portallink} ") <span style="color:gray"> #foreach($u in $trackerService.dataService.sqlSearch($uQuery))$sep#if($u.isUnresolvable())$u.id#else$u.name#end #set($sep =",")#end </span> #end
+
+#### REPORT ##########################
+{style:type=div|color=grey|text-align=right}
+Reported by $trackerService.getTrackerUser($securityService.getCurrentUser()).name\\
+$calendarTool.getCalendarInstance().time
+{style}
+
+1 Requirements Approval Statistics
+
+Displays statistics about the approval process for selected requirements. Requirements have the "Reviewed" status, meaning they are awaiting stakeholder approval. Once approved by all stakeholders designated as an Approving User, a requirement's status can be changed to "Approved" in the workflow.\\ \\
+
+{section}
+{column}
+#set($qApproved="$bQuery AND status:approved") 
+#set($qRejected="$bQuery AND status:rejected") 
+#set($qReviewed="$bQuery AND status:reviewed") 
+#set($qUApproved="$qReviewed AND approvalState:approved") 
+#set($qUDisapproved="$qReviewed AND approvalState:disapproved") 
+#set($qUWaiting="$qReviewed AND approvalState:waiting") 
+#set($qUOther="$qReviewed AND NOT HAS_VALUE:approvalState")
+#set($approved = $trackerService.queryWorkItems($qUApproved,"id").size()) 
+#set($disapproved = $trackerService.queryWorkItems($qUDisapproved,"id").size()) 
+#set($waiting = $trackerService.queryWorkItems($qUWaiting,"id").size()) 
+#set($other = $trackerService.queryWorkItems($qUOther,"id").size()) 
+
+#highchartStart("" "Pie2D" 200 180  )
+#set($highchartColors = ["95d55c","d43d3d","b566d4","cfcfcf"])
+#addHighchartPieDataSet("User Approvals" "'Approved by All Approvers',$approved:'Disapproved by Someone', $disapproved:'Waiting for User Approvals', $waiting:'Approvals Not Requested', $other")
+#addHighchartAdditionalOptions("options.plotOptions = {pie:{dataLabels: {enabled:false},borderWidth:0,animation:false}};")
+#addHighchartAdditionalOptions("options.tooltip= {formatter: function(){ return  ''+ this.point.name + ': <b>'+ this.y + '</b>' }};")
+#highchartEnd()
+
+{column}
+{column}
+#if($pageParameters.reqtype.size()>0)
+#set($type =  $pageParameters.reqtype.iterator().next().id)
+#else
+#set($type =  "requirement")
+#end
+#macro(aBull $color)<span style="color:#$color;font-size:18px;font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;&raquo;</span>#end
+{table:header=no|width=700px}
+#statusIcon($type "reviewed") Reviewed | {workitems:$qReviewed|display=count} | &nbsp;
+#aBull("b566d4") Waiting for User Approvals | {workitems:$qUWaiting | display=count}| #showAp("waiting" $qUWaiting) &nbsp;
+#aBull("cfcfcf") Approvals Not Requested  | {workitems:$qUOther | display=count}|  &nbsp;
+#aBull("d43d3d") Disapproved by Someone  (to be reviewed) | {workitems:$qUDisapproved | display=count}| #showAp("disapproved" $qUDisapproved) &nbsp;
+#aBull("95d55c") Approved by All Approvers (ready to be approved in workflow) | {workitems:$qUApproved | display=count}| #showAp("approved" $qUApproved ) &nbsp;
+#statusIcon($type "approved") Approved| {workitems:$qApproved|display=count}| #showAp("approved" "$qApproved") &nbsp;
+#statusIcon($type "rejected") Rejected| {workitems:$qRejected|display=count}|&nbsp;
+{table}
+{column}
+{section}]]></content>
+</wiki-page>

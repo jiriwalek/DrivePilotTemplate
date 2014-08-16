@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="usesOutlineNumbering">true</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=DP-294"></h1><div id="polarion_wiki macro name=toc"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=DP-295"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-296"></h3><p id="polarion_merged_0">
+  The Electro-Mechanical Test Case Specification document collects the test cases that verifies the Electrical and Mechanical requirements. Each test case specifies inputs, predicted results, and a set of execution conditions for a tested item.
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-298"></h3><p id="polarion_merged_2">
+  No applicable references so far.
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=DP-328"></h2><p id="polarion_merged_6">
+  <span style="font-style: italic;">TO DO: All the Electrical and Mechanical requirements in the following document need to be covered by test cases collected in this document.</span>
+</p><ul id="polarion_merged_1">
+  <li><span style="font-style: italic;"><span id="WIKI_LINK:Design.Electro-Mechanical Design Specification|Electro-Mechanical Design Specification"></span></span></li>
+</ul><h2 id="polarion_wiki macro name=module-workitem;params=id=DP-374"></h2><p id="polarion_merged_5">
+  The approach described in the following test plan document should be used to perform the testing:
+</p><ul id="polarion_merged_10">
+  <li><span id="WIKI_LINK:Design.Electro-Mechanical Verification Test Plan|Electro-Mechanical Verification Test Plan"></span></li>
+</ul><h2 id="polarion_wiki macro name=module-workitem;params=id=DP-299"></h2><div id="polarion_wiki macro name=module-workitem;params=id=DP-333"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-335"></div><p id="polarion_2"></p>]]></field>
+    <field id="structureLinkRole">parent</field>
+    <field id="outlineNumbering">
+        <struct>
+            <item id="prefix"/>
+        </struct>
+    </field>
+    <field id="author">admin</field>
+    <field id="created">2013-01-15 13:44:09.949 +0100</field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="layouter">titleTestSteps</item>
+                <item id="label">Electrical Test Case</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="value">id</item>
+                            <item id="key">fieldsAtStart</item>
+                        </struct>
+                        <struct>
+                            <item id="value">status</item>
+                            <item id="key">fieldsAtEnd</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="value">true</item>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">electricalTestCase</item>
+            </struct>
+            <struct>
+                <item id="layouter">titleTestSteps</item>
+                <item id="label">Mechanical Test Case</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="value">id</item>
+                            <item id="key">fieldsAtStart</item>
+                        </struct>
+                        <struct>
+                            <item id="value">status</item>
+                            <item id="key">fieldsAtEnd</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">mechanicalTestCase</item>
+            </struct>
+        </list>
+    </field>
+</module>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">walekj</field>
+    <field id="created">2014-04-17 16:27:42.032 +0200</field>
+    <field id="derivedFromLinkRole">relates_to</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1>dsadas</h1>
+<p id="polarion_template_0"><br></p>
+<p id="polarion_template_1">THIS DOCUMENT HAS NO CONTENT YET.</p>
+<p id="polarion_template_2">YOU CAN CREATE AND SAVE CONTENT NOW USING THIS EDITOR.</p>
+]]></field>
+    <field id="outlineNumbering">
+        <struct>
+            <item id="prefix"/>
+        </struct>
+    </field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">System Requirement</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">severity</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">systemRequirement</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">open</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">req_specification</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

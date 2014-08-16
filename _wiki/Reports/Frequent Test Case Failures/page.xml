@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130502185009</created>
+<type>content</type>
+<content><![CDATA[{pre}
+<script>
+function toggleDiv(element){
+ if(document.getElementById(element).style.display == 'none')
+       document.getElementById(element).style.display = 'table-footer-group';
+ else
+       document.getElementById(element).style.display = 'none';
+}
+</script>
+{/pre}
+###### PREPARE BASIC DATA ##############################################################################
+#set($debug =false)
+#set($dataService = $trackerService.getDataService())
+#set($project = $trackerService.getTrackerProject($page.project))
+#set($templates = "")
+#set($comma = "")
+#foreach($t in $testManagementService.searchTestRunTemplates("project.id:$page.project","id",-1))
+#set($templates = "$t.id$comma$templates")
+#set($comma = ",")
+#end
+##
+#set($trackerProject = $trackerService.getTrackerProject($project))
+#set($categoriesList = $trackerProject.getCategories())
+#set($categoriesIdList = []) 
+#foreach($c in $categoriesList)
+   #set($void = $categoriesIdList.add($c.id))
+#end
+#set($categoryIds = $categoriesIdList.toString().replaceAll('\[|\]',""))
+##
+#set($results = "")
+#set($comma = "")
+#foreach($enum in $testManagementService.getTestRecordResultEnum($project.id).getAllOptions())
+   #if($enum.id != "passed")
+      #set($results = "$enum.id$comma$results")
+      #set($comma = ",")
+   #end
+#end
+###### PARAMETERS #################################################################################
+{parameter:testRunTemplate|type=string|multi=true|allowed-values=$templates|value=}
+{parameter:fromDate|type=date|value=2013-01-01}
+{parameter:toDate|type=date|value=}
+{parameter:category|type=string|multi=false|allowed-values=$categoryIds|value=|allow-no-value=true}
+{parameter:minFailures|type=string|value=3|allow-no-value=false}
+{parameter:failedTestResult|type=string|multi=false|allowed-values=$results|allow-no-value=false|value=failed}
+##
+###### FORM #################################################################################
+<div style="background-color:\#E1F0FF;padding:5px;">
+{parameter-form}
+<table cellpadding="3" >
+<tr><td align=right style="white-space:nowrap;">Test Run Templates:</td><td>{parameter-editor:testRunTemplate|width=100%}</td></tr>
+<tr><td align=right style="white-space:nowrap;">Finished from: </td><td>{parameter-editor:fromDate|width=150} to: {parameter-editor:toDate|width=150}</td></tr>
+<tr><td align=right style="white-space:nowrap;">Test Case Category:</td><td>{parameter-editor:category|width=100%}</td></tr>
+<tr><td align=right style="white-space:nowrap;">Min. Failures:</td><td >{parameter-editor:minFailures|width=100%}</td></tr>
+<tfoot id="advancedOptionDiv" style="display:none;">
+<tr><td align=right style="white-space:nowrap;">Failed Test Result:</td><td> {parameter-editor:failedTestResult|width=100%}</td></tr>
+</tfoot>
+</table>
+{parameter-form-submit}
+{parameter-form-save} {show:wiki}<a href="javascript:toggleDiv('advancedOptionDiv');">Show Advanced Options...</a>{show}
+{parameter-form}
+</div>
+##
+###### SETUP VARIABLES ##########################################################
+#set($testRunTemplate = $pageParameters.testRunTemplate)
+#set($fromDate = "20000000")
+#set($toDate = "30000000")
+#if($pageParameters.fromDate)
+#set($fromDate = $pageParameters.getDateForQuery("fromDate"))
+#end
+#if($pageParameters.toDate)
+#set($toDate = $pageParameters.getDateForQuery("toDate"))
+#end  
+#set($quote = '"')
+#set($failedTestResult = $pageParameters.getAsString("failedTestResult"))
+##
+#set($testRunWhereQuery = "TR.FK_URI_PROJECT=P.C_URI AND P.C_ID='$page.project' ")
+#set($quote='"')
+##
+#set($testRunTemplateQuery = "")
+#set($op ="TR.FK_URI_TEMPLATE=TRT.C_URI AND (")
+#foreach($t in $pageParameters.testRunTemplate)
+  #set($testRunTemplateQuery = "${testRunTemplateQuery}${op}TRT.C_ID='$t'")
+  #set($op =" OR ")
+#end
+#if($testRunTemplateQuery.trim().length()>0)
+  #set($testRunTemplateQuery = "${testRunTemplateQuery})")
+  #set($testRunWhereQuery = "${testRunWhereQuery} AND $testRunTemplateQuery")
+#end
+##
+#set($sqlDateFormat ='yyyy-MM-dd')
+#if($pageParameters.fromDate)
+  #set($testRunWhereQuery = "${testRunWhereQuery} AND TR.C_FINISHEDON>='$calendarTool.formatDate($pageParameters.fromDate,$sqlDateFormat) 00:00:00'")
+#end
+#if($pageParameters.toDate)
+  #set($testRunWhereQuery = "${testRunWhereQuery} AND TR.C_FINISHEDON<='$calendarTool.formatDate($pageParameters.toDate,$sqlDateFormat) 00:00:00'")
+#end
+##
+#if($pageParameters.category == "")
+   #set($testRecordsQuery = "SELECT TRR.FK_TESTCASE, COUNT(TRR.C_RESULT) FROM PROJECT P, TESTRUN TR,TESTRUN TRT, STRUCT_TESTRUN_RECORDS TRR WHERE")
+#else
+   #set($testRecordsQuery = "SELECT TRR.FK_TESTCASE, COUNT(TRR.C_RESULT) FROM PROJECT P, TESTRUN TR,TESTRUN TRT, STRUCT_TESTRUN_RECORDS TRR, CATEGORY CAT, REL_WORKITEM_CATEGORY_CATEGORIES LINKCAT WHERE")
+#end
+##
+#set($testRecordsWhereQuery = "$testRunWhereQuery AND TRR.FK_P_TESTRUN =  TR.C_PK AND TRR.C_RESULT = '$failedTestResult'")
+##
+#if($pageParameters.category != "")
+   #set($testRecordsWhereQuery = "${testRecordsWhereQuery} AND LINKCAT.FK_WORKITEM = TRR.FK_TESTCASE AND LINKCAT.FK_URI_CATEGORY = CAT.C_URI AND CAT.C_ID = '$pageParameters.category'")
+#end
+##
+#if($pageParameters.category != "")
+   #set($defectsQuery = "SELECT TRR.FK_URI_DEFECT, COUNT(TRR.C_RESULT) FROM WORKITEM D, PROJECT P, TESTRUN TR,TESTRUN TRT, STRUCT_TESTRUN_RECORDS TRR, CATEGORY CAT, REL_WORKITEM_CATEGORY_CATEGORIES LINKCAT WHERE")
+#else
+   #set($defectsQuery = "SELECT TRR.FK_URI_DEFECT, COUNT(TRR.C_RESULT) FROM WORKITEM D, PROJECT P, TESTRUN TR,TESTRUN TRT, STRUCT_TESTRUN_RECORDS TRR WHERE")
+#end
+##
+#set($defectsQuery = "${defectsQuery} $testRecordsWhereQuery AND D.C_URI=TRR.FK_URI_DEFECT GROUP BY TRR.FK_TESTCASE HAVING COUNT(TRR.C_RESULT) >= $pageParameters.minFailures")
+##
+#set($testRecordsWhereQuery = "${testRecordsWhereQuery} GROUP BY TRR.FK_TESTCASE HAVING COUNT(TRR.C_RESULT) >= $pageParameters.minFailures")
+##
+#set($testRecordsQuery = "${testRecordsQuery} $testRecordsWhereQuery")
+##
+#### REPORT ##########################
+##
+
+{style:type=div|color=grey|text-align=right}
+Reported by $trackerService.getTrackerUser($securityService.getCurrentUser()).name\\
+$calendarTool.getCalendarInstance().time
+{style}
+
+1 Frequent Test Failures
+
+Displays test cases (and related defects) that have failed often in selected Test Runs (filtered by Test Run Template and Execution Time). Test cases can also be filtered by Category. 
+
+1.1 Frequently Failed Test Cases
+{workitems:sqlQuery=$testRecordsQuery|fields=id,title,status}
+##
+1.1 Defects
+{workitems:sqlQuery=$defectsQuery|fields=id,title,status,severity}
+
+#macro(showSQL $label $sql)#if($debug)<div  style="padding:10px;border:1px solid black">*$label*\\<code>$sql</code></div>#end#end
+#if($debug)#info("Debug messages ON, change debug=true to debug=false in the source")#end
+#showSQL("Defects" $defectsQuery)
+#showSQL("Test Records" $testRecordsQuery)]]></content>
+</wiki-page>

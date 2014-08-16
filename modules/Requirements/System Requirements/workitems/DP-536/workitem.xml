@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="author">rProject</field>
+    <field id="created">2014-07-22 14:15:13.211 +0200</field>
+    <field id="previousStatus">open</field>
+    <field id="priority">50.0</field>
+    <field id="severity">must_have</field>
+    <field id="status">open</field>
+    <field id="title">Signed By</field>
+    <field id="type">heading</field>
+</work-item>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="type">task</field>
+    <field id="author">admin</field>
+    <field id="title">Define the development environment</field>
+    <field id="created">2013-01-09 22:59:55.355 +0100</field>
+    <field id="description" text-type="text/html">Use the pre-created &lt;span id="DOM_6250"&gt;&lt;span id="WIKI_LINK:Development/Development%20Environment|Development Environment"&gt;&lt;a class="descriptionLink" target="_blank" href="/polarion/#/project/Development/wiki/Development%20Environment"&gt;Development Environment&lt;/a&gt;&lt;/span&gt;&lt;/span&gt; page in the Development space to document the details of your project's software and/or  hardware development environment. This can be a handy reference for developers, engineers, contractors, and others that you bring on board the project.</field>
+    <field id="priority">50.0</field>
+    <field id="status">open</field>
+    <field id="severity">normal</field>
+</work-item>

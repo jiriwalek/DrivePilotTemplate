@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>walekj</author>
+<created>20140701125333</created>
+<type>content</type>
+<content><![CDATA[
+{workitems:type:systemRequirement|fields=id,title, severity as image-text, status}
+]]></content>
+</wiki-page>

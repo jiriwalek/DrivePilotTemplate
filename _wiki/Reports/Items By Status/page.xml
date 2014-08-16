@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130502201233</created>
+<type>content</type>
+<content><![CDATA[#includeForm("_default.ProjectMacros")
+### PARAM #######################################################
+{parameter:wiType|type=enum:workitem-type|value=task|allow-no-value=false|multi=false}
+{parameter:columns|type=string|value=id,title|allow-no-value=false|multi=false}
+{parameter:sortby|type=string|value=id|allow-no-value=false|multi=false}
+{parameter:top|type=string|value=10|allow-no-value=false|multi=false}
+
+### FORM #################################################################
+<div style="background-color:\#E1F0FF;padding:5px;">
+{parameter-form}
+<table cellpadding="3" >
+<tr><td align=right style="white-space: nowrap">Type:</td><td>{parameter-editor:wiType|width=300}</td></tr>
+<tr><td align=right style="white-space: nowrap">Columns:</td><td>{parameter-editor:columns|width=300}</td></tr>
+<tr><td align=right style="white-space: nowrap">Sort by:</td><td>{parameter-editor:sortby|width=300}</td></tr>
+<tr><td align=right style="white-space: nowrap">Show top #</td><td>{parameter-editor:top|width=300}</td></tr>
+</table>
+{parameter-form-submit}
+{parameter-form-save} 
+{parameter-form}
+</div>
+
+### VAR #################################################################
+#set($witype = $pageParameters.wiType)
+
+### REPORT #######################################################
+#if(!$witype)
+  #info("Please, select Work Item type.")
+#else
+
+{style:type=div|color=grey|text-align=right}
+Reported by $trackerService.getTrackerUser($securityService.getCurrentUser()).name\\
+$calendarTool.getCalendarInstance().time
+{style}
+
+1 Items by Status Report
+
+Displays Work Items (filtered by Work Item type) grouped by status.
+
+{table:header=no}
+#InternalScoreBoard($page.project $witype "")
+{table}
+
+#set($statuses=$trackerService.getTrackerProject($project).getStatusEnum().getAvailableOptions($witype.getId()))
+#foreach($s in $statuses)
+1.1 $s.name
+{workitems:type:$witype.id AND status:$s.id|fields=$pageParameters.columns|sortby=$pageParameters.sortby|top=$pageParameters.top}
+#end
+
+#end]]></content>
+</wiki-page>

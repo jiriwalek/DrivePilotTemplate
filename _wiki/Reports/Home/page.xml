@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130419174822</created>
+<type>active</type>
+<content><![CDATA[1 Reports
+
+{pages:space=@current|display=table| sortby=name|query=NOT page:Home}]]></content>
+</wiki-page>

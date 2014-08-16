@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="type">task</field>
+    <field id="author">admin</field>
+    <field id="title">Document verification plan for Software Requirements</field>
+    <field id="created">2013-01-23 22:05:45.226 +0100</field>
+    <field id="description" text-type="text/html">Fill in the &lt;span id="WIKI_LINK:Design.Software%20Verification%20Test%20Plan|Software Verification Test Plan document"&gt;&lt;/span&gt;. Specify the approach, planned tasks and expectations for verification of the Software Requirements.</field>
+    <field id="priority">50.0</field>
+    <field id="status">open</field>
+    <field id="severity">normal</field>
+    <field id="previousStatus">open</field>
+</work-item>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20130419174846</created>
+<type>content</type>
+<content><![CDATA[{pre}
+<script>
+function toggleDiv(element){
+ if(document.getElementById(element).style.display == 'none')
+       document.getElementById(element).style.display = 'table-footer-group';
+ else
+       document.getElementById(element).style.display = 'none';
+}
+</script>
+{/pre}
+###### PARAMETERS #################################################################################
+{parameter:type|type=enum:workitem-type|multi=true|value=systemRequirement,softwareRequirement,mechanicalRequirement,electricalRequirement|allow-no-value=false}
+{parameter:query|type=string|value=status:approved}
+{parameter:direction|type=enum:link-direction|value=backlinked}
+{parameter:linkRole|type=enum:wi-link-role|multi=true|value=verifies,implements}
+{parameter:linkedItemType|type=enum:workitem-type|multi=true|value=}
+{parameter:columns|type=string|multi=true|allowed-values=Project,Item Type,Link Role,Suspect,Status,Assignee|value=Link Role,Suspect,Status}
+{parameter:sort|type=string|value=type id}
+
+###### FORM #################################################################################
+<div style="background-color:\#E1F0FF;padding:5px;">
+{parameter-form}
+<table cellpadding="3" style="background-color:\#E1F0FF">
+<tr><td width=150 align=right>Work Item Types:</td><td>{parameter-editor:type|width=100%}</td></tr>
+<tr><td width=150 align=right>Additional Query:</td><td >{parameter-editor:query|width=100%}</td></tr>
+<tr><td width=150 align=right>Link Direction / Role:</td><td>{parameter-editor:direction}  {parameter-editor:linkRole|width=278} </td></tr>
+<tfoot id="advancedOptionDiv" style="display:none;">
+<tr><td width=150 align=right>Linked Item Types:</td><td> {parameter-editor:linkedItemType|width=100%}</td></tr>
+<tr><td width=150 align=right>Columns:</td><td>{parameter-editor:columns|width=100%} </td></tr>
+<tr><td width=150 align=right>Sort by: </td><td>{parameter-editor:sort|width=100%}</td></tr>
+</tfoot>
+</table>
+{parameter-form-submit}
+{parameter-form-save} {show:wiki}<a href="javascript:toggleDiv('advancedOptionDiv');">Show Advanced Options...</a>{show}
+{parameter-form}
+</div>
+###### SETUP VARIABLES ######################################################################
+#set($itemType = $pageParameters.getAsString("type", " "))
+#set($specialQuery = $pageParameters.query)
+#set($linkRoles = [])
+#foreach($linkRole in $pageParameters.linkRole)
+   #set($void = $linkRoles.add($linkRole.id))
+#end
+#set($itemTypeQuery = "($itemType)")
+#if($specialQuery.trim() == "")
+  #set($query = "type:$itemTypeQuery")
+#else
+ #set($query = "type:$itemTypeQuery AND $specialQuery")
+#end 
+#set($linkedItemTypes = [])
+#foreach($itemType in $pageParameters.linkedItemType)
+   #set($void = $linkedItemTypes.add($itemType.id))
+#end
+#set($columns = $pageParameters.columns)
+
+###### DEBUG LIST #################################################################################
+#*
+LINKROLEQUERY: $linkRoleQuery
+
+ITEMTYPE: $newItemType
+
+QUERY: "$query"
+
+LINKEDITEMTYPES: $linkedItemTypeQuery
+
+COLUMNS: $columns
+*#
+
+###### PREPARE DATA ############################################################################################
+#set($project = $trackerService.getTrackerProject($page.project))
+#set($workItems = $project.queryWorkItems($query,$pageParameters.sort))
+
+###### REPORT ############################################################################################
+
+{style:type=div|color=grey|text-align=right|font-size:8px}
+Reported by $trackerService.getTrackerUser($securityService.getCurrentUser()).name\\
+$calendarTool.getCalendarInstance().time
+{style}
+
+1 Traceability Report
+For selected Work Items, displays linked or backlinked items (filtered by type or additional query parameter). Links can also be filtered by link role and/or linked Work Item type.
+
+
+#macro(getLinkedItemsDirection $item $direction)
+ #if($direction.isBacklinked())
+    #set($linkedWorkItems = $item.getLinkedWorkItemsStructsBack())
+ #else
+    #set($linkedWorkItems = $item.getLinkedWorkItemsStructsDirect())
+ #end
+ #foreach($link in $linkedWorkItems)
+   #set($linkedItem =  $link.linkedItem)
+   #set($linkedItemTypeId = $linkedItem.type.id)
+   #set($show=false)
+   #if($linkRoles.isEmpty() || $linkRoles.contains($link.linkRole.id))
+      #if($linkedItemTypes.isEmpty()  || $linkedItemTypes.contains($linkedItemTypeId))
+        #set($show="true")
+      #end
+   #end
+   #if($show)
+    <tr>  
+      <td style="padding-left:40px">
+           {workitem:$linkedItem.id|display=long}
+      </td>
+      #foreach($c in $columns)
+      <td>
+           #if($c.equals("Project"))  $linkedItem.project.name #end
+           #if($c.equals("Item Type"))  $linkedItem.type.name #end 
+           #if($c.equals("Status"))  $linkedItem.status.name #end 
+           #if($c.equals("Link Role")) #if($direction.isBacklinked()) $link.linkRole.name  #else  $link.linkRole.oppositeName #end #end
+           #if($c.equals("Suspect")) #if($link.isSuspect() == true) <img src="/polarion/icons/default/suspect.gif"></img> #end #end
+           #if($c.equals("Assignee"))  #setAssigneeNames($linkedItem) $assigneeNames #end
+      </td>
+      #end
+   </tr>
+   #end
+ #end
+#end
+#macro(setAssigneeNames $i)
+    #set($assigneeList = [])
+    #foreach($assignee in $i.getAssignees())
+        #set($void = $assigneeList.add($assignee.name))
+    #end
+    #set($assigneeNames = $assigneeList.toString().replaceAll('\[|\]',""))
+    ##DEBUG   
+    ##ASSIGNEELIST: $assigneeList
+#end
+
+##use different styles for export to pdf
+{show:wiki}<table class="itemsTable" >{show}
+{show:pdf}<table class="wiki-table"  style="width:100%">{show}
+<thead>
+<tr>
+  <th>ID-Title</th>
+  #foreach($c in $columns)
+    <th>$c</th>
+  #end
+</tr>
+</thead>
+#set($colspan=$columns.size()+1)
+#foreach($item in $workItems)
+ <tbody>
+   <tr><td colspan="$colspan">
+   *{workitem:$item.id|display=long}*</td></tr>
+   #getLinkedItemsDirection($item $pageParameters.direction) 
+ </tbody>
+#end
+</table>]]></content>
+</wiki-page>

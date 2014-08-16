@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">walekj</field>
+    <field id="branchedFrom">Requirements#System Requirements</field>
+    <field id="created">2014-06-26 14:55:36.920 +0200</field>
+    <field id="derivedFromLinkRole">relates_to</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=DP-510"></h1><div id="polarion_wiki macro name=toc"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=DP-511"></h2><p id="polarion_2"></p><div id="polarion_editor_html_block3" class="polarion-dle-wiki-block">
+  <div id="polarion_editor_html_block_content" contentEditable="false"></div><pre id="polarion_editor_html_block_source" class="polarion-dle-wiki-block-source" contentEditable="false">$document.getUri()</pre>
+</div><p id="polarion_4"></p><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-512"></h3><p id="polarion_merged_8">
+  The System Requirements Specification (SysRS) describes what the system’s sponsor expects the system to do, the system’s expected environment, the system’s usage profile, its performance parameters, and its expected quality and effectiveness. The SysRS is a structured collection of information that embodies the requirements of the system. The SysRS completely describes all inputs, outputs, and required relationships between inputs and outputs<span style="font-style: italic;">.<br/>
+    </span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-513"></h3><p id="polarion_merged_2">
+  DrivePilot is an Auto Pilot application for automotive vehicles of all types.  There will be an OEM application as well as a after-market installation kit for existing popular automobiles manufactured after 2006.
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-514"></h3><p id="polarion_merged_4">
+  <a href="http://shop.oreilly.com/product/9781933952291.do?sortby=publicationDate" target="_blank" class="descriptionLink">Spice Manual</a>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=DP-515"></h2><p id="polarion_merged_14">
+  DrivePilot is the next generation of auto pilot systems for vehicles.  Using complex infrared and visual imaging technology, DrivePilot allows the driver to input a destination into the DrivePilot computer, set speed and driving comforts, and sit back and enjoy the ride.  DrivePilot will negotiate the driving route, look out for other automobiles, pedestrians, avoid and monitor accidents, and make course corrections to avoid traffic.
+</p><p id="polarion_merged_17">
+  Texting while driving is no longer a problem with DrivePilot, because your not really driving anymore.
+</p><p id="polarion_merged_18">
+  DrivePilot disengages at the touch of the conventional automotive controls, with voice command, or by interaction with the DrivePilot user interface.
+</p><p id="polarion_merged_20">
+  DrivePilot offers automated control of gearing, speed, steering and turn signals, and braking.  DrivePilot also includes interfaces into the OBDII vehicle codes and monitors certain engine vibrations to identify existing and pending maintenance problems.
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=DP-516"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-517"></h3><div id="polarion_wiki macro name=module-workitem;params=id=DP-313|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-314|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-315|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-316|level=1|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-317|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-332|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-350|external=true"></div><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-518"></h3><div id="polarion_wiki macro name=module-workitem;params=id=DP-323|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-324|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-336|level=1|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-337|level=1|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-338|level=1|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-352|external=true"></div><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-519"></h3><h4 id="polarion_wiki macro name=module-workitem;params=id=DP-520"></h4><div id="polarion_wiki macro name=module-workitem;params=id=DP-363|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-364|external=true"></div><h4 id="polarion_wiki macro name=module-workitem;params=id=DP-521"></h4><div id="polarion_wiki macro name=module-workitem;params=id=DP-365|external=true"></div><h4 id="polarion_wiki macro name=module-workitem;params=id=DP-522"></h4><div id="polarion_wiki macro name=module-workitem;params=id=DP-369|external=true"></div><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-523"></h3><h4 id="polarion_wiki macro name=module-workitem;params=id=DP-524"></h4><div id="polarion_wiki macro name=module-workitem;params=id=DP-322|external=true"></div><h4 id="polarion_wiki macro name=module-workitem;params=id=DP-525"></h4><div id="polarion_wiki macro name=module-workitem;params=id=DP-397|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-398|level=1|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-399|level=1|external=true"></div><h4 id="polarion_wiki macro name=module-workitem;params=id=DP-526"></h4><div id="polarion_wiki macro name=module-workitem;params=id=DP-400|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-401|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-402|external=true"></div><h5 id="polarion_wiki macro name=module-workitem;params=id=DP-527"></h5><div id="polarion_wiki macro name=module-workitem;params=id=DP-405|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-406|external=true"></div><h5 id="polarion_wiki macro name=module-workitem;params=id=DP-528"></h5><div id="polarion_wiki macro name=module-workitem;params=id=DP-407|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-408|external=true"></div><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-529"></h3><div id="polarion_wiki macro name=module-workitem;params=id=DP-410|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-411|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-412|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-413|external=true"></div><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-530"></h3><div id="polarion_wiki macro name=module-workitem;params=id=DP-415|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-416|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-417|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-418|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-419|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-420|level=1|external=true"></div><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-531"></h3><div id="polarion_wiki macro name=module-workitem;params=id=DP-422|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-423|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-424|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-425|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-426|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-427|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-428|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-429|external=true"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=DP-532"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-533"></h3><div id="polarion_wiki macro name=module-workitem;params=id=DP-432|external=true"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-433|external=true"></div><p id="polarion_1"></p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">System Requirement</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">status as image,targetVersion</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">systemRequirement</item>
+            </struct>
+        </list>
+    </field>
+    <field id="signatureContexts">
+        <list>
+            <struct>
+                <item id="targetStatusId">approved</item>
+                <item id="transitionDataRevision">17824</item>
+            </struct>
+        </list>
+    </field>
+    <field id="status">rejected</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">req_specification</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

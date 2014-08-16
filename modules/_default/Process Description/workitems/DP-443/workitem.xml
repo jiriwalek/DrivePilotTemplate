@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="type">task</field>
+    <field id="author">admin</field>
+    <field id="title">Specify testing procedure to verify the Software Requirements</field>
+    <field id="created">2013-01-23 22:05:45.273 +0100</field>
+    <field id="description" text-type="text/html">Create test cases in the &lt;span id="DOM_4959"&gt;&lt;span id="WIKI_LINK:Design/ Software%20Test%20Specification| Software Test Specification"&gt;&lt;a target="_blank" href="/polarion/#/project/Design/wiki/drivepilot/%20Software%20Test%20Specification" class="descriptionLink"&gt;Software Test Specification&lt;/a&gt;&lt;/span&gt;&lt;/span&gt; document. As you create test cases, be sure to link each test case to the software requirement it verifies. (If one test case verifies more than one requirement, link it to all verified requirements.) You can create links in the Work Item Properties panel of the sidebar (Show Sidebar &amp;gt; Document Properties.)</field>
+    <field id="priority">50.0</field>
+    <field id="status">open</field>
+    <field id="severity">normal</field>
+    <field id="previousStatus">open</field>
+</work-item>

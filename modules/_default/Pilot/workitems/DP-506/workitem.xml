@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="author">kelleroval</field>
+    <field id="created">2014-06-03 16:13:29.193 +0200</field>
+    <field id="description" text-type="text/html">&lt;a class="descriptionLink" target="_blank" href="http://cns.labs.polarion.com/polarion/#/project/PolarionSVN/workitem?id=DPP-44479"&gt;cnshahaha9&lt;/a&gt;  fgshdg Problem wtf &lt;a class="descriptionLink" target="_blank" href="http://cns.labs.polarion.com/polarion/#/project/PolarionSVN/workitem?id=DPP-44479"&gt;9&lt;/a&gt;tralala&lt;br/&gt;&lt;img src="workitemimg:1-screenshot-20140603-161329.jpeg"/&gt;  3.8.2.20140611-1546_0 &lt;a class="descriptionLink" target="_blank" href="http://www.seznam.cz"&gt;wtfilikeyou erkuziueirueiuieurieuz iu ziuez iuziueziu zi uzieuziuziuziuzieuziruz iuziueziueziu zu z  uiu zieugziuewr iur iwuerziw urzti wuerzitu zwieurziuezriuzw ieurz iuezri uziu ziu zierutzi uztiu ziruetz ieurzti uzewirutz iuezriuzwei uz fkhfurh iuhfiuri eru ieurzi eurtierut err wkhgrrjhwiwuzriwuezriuweiruz iwuezriw zieurzi uziweuzriu zwiuezriu zwieurziwuezriwuezriu ziewuzriwzi uwzeiruz wieuzriw uezrizizrwziuezri wuez iuz iuzeiru zieuzriwueziru wiuerziuwzeiruz wiuez iuwzeiur&lt;/a&gt;</field>
+    <field id="hyperlinks">
+        <list>
+            <struct>
+                <item id="role">ref_int</item>
+                <item id="uri">http://cns.labs.polarion.com/polarion/#/project/PolarionSVN/workitem?id=DPP-44479</item>
+            </struct>
+        </list>
+    </field>
+    <field id="previousStatus">open</field>
+    <field id="priority">50.0</field>
+    <field id="severity">normal</field>
+    <field id="status">open</field>
+    <field id="timePoint">wendy1</field>
+    <field id="type">issue</field>
+</work-item>

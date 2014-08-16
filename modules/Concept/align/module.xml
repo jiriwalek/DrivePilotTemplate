@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">maten</field>
+    <field id="created">2014-03-13 10:43:43.092 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=DP-500"></h1><p id="polarion_1">
+  <br/>
+</p><ul id="polarion_2">
+  <li>kjghjg</li>
+  <li>dfgdfg</li>
+  <ul>
+    <li>dfgdfg</li>
+    <li>dfgfdg</li>
+    <ul>
+      <li>dfgdfg</li>
+      <li>dfgdfgd</li>
+      <li>sd</li>
+    </ul>
+    <li>dfgfdgdf</li>
+    <li>dfgdfg</li>
+  </ul>
+  <li>dfgdfg</li>
+  <li>dfg</li>
+</ul><p id="polarion_3"></p><table id="polarion_wiki macro name=table;params=uid=4" class="polarion-Document-table" style="width: 80%;margin-left: auto;margin-right: auto;border: 1px solid #CCCCCC;empty-cells: show;border-collapse: collapse;">
+  <tbody>
+    <tr>
+      <th style="font-weight: bold;font-size: 9pt;background-color: #F0F0F0;line-height: 1.5;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;">left</th>
+      <th style="font-weight: bold;font-size: 9pt;background-color: #F0F0F0;line-height: 1.5;text-align: center;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;">center</th>
+      <th style="font-weight: bold;font-size: 9pt;background-color: #F0F0F0;line-height: 1.5;text-align: right;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;">right</th>
+    </tr>
+    <tr>
+      <td style="font-size: 9pt;line-height: 1.5;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;">1</td>
+      <td style="font-size: 9pt;line-height: 1.5;text-align: center;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;">2</td>
+      <td style="font-size: 9pt;line-height: 1.5;text-align: right;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;">3</td>
+    </tr>
+    <tr>
+      <td style="font-size: 9pt;line-height: 1.5;text-align: left;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;">A</td>
+      <td style="font-size: 9pt;line-height: 1.5;text-align: center;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;">B</td>
+      <td style="font-size: 9pt;line-height: 1.5;text-align: right;vertical-align: top;height: 12px;border: 1px solid #CCCCCC;padding: 5px;">C</td>
+    </tr>
+  </tbody>
+</table><p id="polarion_template_1">
+  THIS DOCUMENT HAS NO CONTENT YET.
+</p><p id="polarion_template_2">
+  YOU CAN CREATE AND SAVE CONTENT NOW USING THIS EDITOR.
+</p>]]></field>
+    <field id="outlineNumbering">
+        <struct>
+            <item id="prefix"/>
+        </struct>
+    </field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">System Requirement</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">severity</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">systemRequirement</item>
+            </struct>
+        </list>
+    </field>
+    <field id="structureLinkRole">parent</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

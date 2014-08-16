@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>rProject</author>
+<created>20140129120443</created>
+<type>content</type>
+<content><![CDATA[#if($page.name.equals("Iteration_32-burndown"))
+1 Iteration 32 - Burn down
+
+This is just a demo chart, as Polaion ALM demodata does not contain historical data. It shows how the actual Iteration Burn Down chart looks.
+#end
+
+{pre}
+<div>
+  <div id="JsMacroRenderer_9" style="width:800px;height:400px;" ></div>
+<script type="text/javascript">
+Highcharts.setOptions({chart: {style: {fontFamily: 'Arial, Helvetica, \"sans-serif\"'}}});
+Highcharts.setOptions({ lang:{months:['January','February','March','April','May','June','July','August','September','October','November','December'], shortMonths:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], weekdays:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'], decimalPoint: '.', loading: 'Loading...', resetZoom: 'Reset Zoom', resetZoomTitle: 'Reset zoom level 1:1', thousandSep: ',', contextButtonTitle: 'Chart context menu', printChart: 'Print Chart', downloadJPEG: 'Download JPEG image', downloadPDF: 'Download PDF document', downloadPNG: 'Download PNG image', downloadSVG: 'Download SVG image'}});
+var options = {chart: {}, title: {text: '', useHTML:true}, 
+credits: {href: null,text: null}, 
+xAxis : {maxPadding: 0, type: 'datetime'}, 
+yAxis : {title: {text: 'Working Hours', useHTML:true}, gridLineWidth : 0},
+ tooltip: {backgroundColor: 'rgba(247, 247, 247, 0.9)', formatter: function(){return this.point.hint;} } 
+,
+series: [
+{name: 'Ideal Progress',
+type: 'area',
+color: '#1d9bd6',
+marker: {enabled: false}, 
+dashStyle: 'ShortDot',
+fillColor: 'rgba(225, 240, 255, 0.5)',
+data: [{x : Date.UTC(2013, 11, 15), y : 160.0, hint : '2013-12-15<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 21), y : 70.0, hint : '2013-12-23<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 22), y : 70.0, hint : '2013-12-23<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 27), y : 0.0, hint : '2013-12-27<br>This is sample content only'}]}
+,
+{name: 'Real Progress',
+type: 'area',
+color: '#53ccb1',
+marker: {radius: 5, lineWidth: 2, lineColor: 'white', fillColor: '#53ccb1'}, 
+fillOpacity: 0.3,
+data: [{x : Date.UTC(2013, 11, 15), y : 160.0, hint : '2013-12-15<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 16), y : 155.0, hint : '2013-12-16<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 17), y : 148.0, hint : '2013-12-17<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 18), y : 140.0, hint : '2013-12-18<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 19), y : 131.0, hint : '2013-12-19<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 20), y : 100.0, hint : '2013-12-20<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 21), y : 82.0, hint : '2013-12-21<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 22), y : 82.0, hint : '2013-12-22<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 23), y : 75.0, hint : '2013-12-23<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 24), y : 68.0, hint : '2013-12-24<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 25), y : 56.0, hint : '2013-12-25<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 26), y : 38.0, hint : '2013-12-26<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 27), y : 0.0, hint : '2013-12-27<br>This is sample content only'}]}
+,
+{name: 'Relative Progress',
+type: 'column',
+color: '#aed77e',
+marker: {enabled: false},
+data: [{x : Date.UTC(2013, 11, 16), y : 5.0, hint : '2013-12-16<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 17), y : 9.0, hint : '2013-12-17<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 18), y : 9.0, hint : '2013-12-18<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 19), y : 17.0, hint : '2013-12-19<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 20), y : 31.0, hint : '2013-12-20<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 21), y : 0.0, hint : '2013-12-21<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 22), y : 0.0, hint : '2013-12-22<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 23), y : 7.0, hint : '2013-12-23<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 24), y : 7.0, hint : '2013-12-24<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 25), y : 12.0, hint : '2013-12-25<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 26), y : 18.0, hint : '2013-12-26<br>This is sample content only'},
+ {x : Date.UTC(2013, 11, 27), y : 38.0, hint : '2013-12-27<br>This is sample content only'}]}
+]};
+options.xAxis.type = 'datetime';
+options.chart.zoomType= 'x';
+if (options.chart == null){
+ options.chart = {height: 400, width: 800};
+} else {
+ options.chart.height = 400;
+ options.chart.width = 800;
+}
+if (options.chart == null){
+ renderTo: 'JsMacroRenderer_9'
+} else {
+options.chart.renderTo = 'JsMacroRenderer_9';
+}
+new Highcharts.Chart(options);
+</script>
+</div>
+{/pre}
+]]></content>
+</wiki-page>

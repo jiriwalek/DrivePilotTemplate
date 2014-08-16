@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">admin</field>
+    <field id="created">2013-01-09 22:56:37.219 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=DP-147"></h1><div id="polarion_wiki macro name=toc"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=DP-148"></h2><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-149"></h3><p id="polarion_new_0">
+  This document describes the design of a DrivePilot software application. Software components described in this document have been identified as needed to implement requirements from System Requirements specification (see References below). Together with that document, it provides the design specifications needed to implement the system.
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-150"></h3><p id="polarion_new_11">
+  <span style="font-style: italic;">TO DO: Provide a short description of the software being specified.</span>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-151"></h3><p id="polarion_merged_3">
+  <span id="WIKI_LINK:Requirements.System Requirements|System Requirements"></span>
+</p><h2 id="polarion_wiki macro name=module-workitem;params=id=DP-161"></h2><h4 id="polarion_wiki macro name=module-workitem;params=id=DP-90"></h4><p id="polarion_merged_2">
+  <img src="attachment:diagram_20130222-1237.06935.mxg.png" style="width: 754px;height: 504px;"/>
+</p><h3 id="polarion_wiki macro name=module-workitem;params=id=DP-341"></h3><div id="polarion_wiki macro name=module-workitem;params=id=DP-334|layout=0"></div><h4 id="polarion_wiki macro name=module-workitem;params=id=DP-342"></h4><div id="polarion_wiki macro name=module-workitem;params=id=DP-345|layout=0"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-351|layout=0"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-348|layout=0|level=1"></div><h4 id="polarion_wiki macro name=module-workitem;params=id=DP-343"></h4><div id="polarion_wiki macro name=module-workitem;params=id=DP-347|layout=0"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-353|layout=0"></div><div id="polarion_wiki macro name=module-workitem;params=id=DP-349|layout=0|level=1"></div><h2 id="polarion_wiki macro name=module-workitem;params=id=DP-169"></h2><div id="polarion_editor_html_block_merged_0" class="polarion-dle-wiki-block">
+  <div id="polarion_editor_html_block_content" contentEditable="false"></div><pre id="polarion_editor_html_block_source" class="polarion-dle-wiki-block-source" contentEditable="false">Browse the Requirements refined by design items using: 
+{portallink:/wiki/Requirements/System Requirements?link_role=parent,refines&amp;tree_depth=5&amp;tab=tree|addcontext=yes}*Requirements - Design Traceability Tree*{portallink}</pre>
+</div><p id="polarion_2"></p>]]></field>
+    <field id="outlineNumbering">
+        <struct/>
+    </field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">Software Requirement</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">softwareRequirement</item>
+            </struct>
+        </list>
+    </field>
+    <field id="structureLinkRole">parent</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

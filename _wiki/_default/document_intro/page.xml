@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>rProject</author>
+<created>20140815210731</created>
+<type>content</type>
+<content><![CDATA[###this is here just to test the page
+#set($test = false)
+#if(!$document)
+#set($test = true)
+#set($document = $trackerService.getWorkItem("drivepilot","DP-539").getModule())
+#end
+
+#macro(panelTitle $t)
+<div style="color: \#003366;font-weight: bold;line-height: 1.2;font-family: Arial, Helvetica, sans-serif;margin: 0.83em 0 0.41em;font-size:16px">$t</div>
+#end
+
+#macro(renderVerdictIcon $verdict)
+  #if($verdict.id.equals("signed"))
+   <img style="height:16px" src="/polarion/wiki/bin/download/project/drivepilot/page/_default/document_intro/signed.png"/>
+  #elseif($verdict.id.equals("rejected"))
+   <img style="height:16px" src="/polarion/wiki/bin/download/project/drivepilot/page/_default/document_intro/rejected.png"/>
+  #else
+   ##<img style="height:16px" src="/polarion/ria/images/sidebars/signatures/pending.png"/>
+  #end
+#end
+
+#set($previoislyApprovedMessage = "This document is currently in NOT Approved status. The last approved version is:")
+#set($notYetApprovedMessage = "This document was not yet Approved.")
+
+
+#macro(lastApprovedVersion $approvedState)
+  #if(!$document.status.id.equals($approvedState))
+  #panelTitle("Last Approved Version")
+  #set($approvedOn = false)
+  #foreach($c in $document.getSignatureContexts())
+    #if($c.targetStatus.id.equals($approvedState))  
+      ##set($approvedOn = "2012-01-02 12:33")
+    #end
+  #end
+  #if($approvedOn)
+  #warning($previoislyApprovedMessage $approvedOn)
+  #else
+  #warning($notYetApprovedMessage )
+  #end
+  #end
+#end
+
+
+#macro(renderTransitionTime $r)
+<span style="font-size:12px;padding-left:10px">
+#if($r)
+- {portallink:/project/${document.project.id}/wiki/${document.moduleFolder}/${document.id}?sidebar=signatures&status=reviewed&revision=$r} $calendarTool.formatDate($trackerService.dataService.getRevision($document.getContextId(),$r).created,"yyyy-MM-dd HH:mm")
+{portallink}
+#else
+ - Transition In Progress
+#end
+</span>
+#end
+
+#macro(renderSignatures)
+#panelTitle("Signed Statuses")
+
+<table border=0 width="700px" cellpadding=5>
+#foreach($c in $document.getSignatureContexts())
+##$c
+#if($c.transitionRevision)
+  <tr style="border-bottom: thin solid lightgray;height:40px;">
+  	<td colspan=3 style="font-size:15px;vertical-align:bottom">*$c.targetStatus.name*  #renderTransitionTime($c.transitionRevision)</td></tr>
+  #foreach($s in $c.signatures)
+    <tr style="">
+      <td style="width:20px;padding-left:10px">#renderVerdictIcon($s.verdict)</td>
+      <td align="left"> *$s.signedBy.name* <br/> <span style="font-size:11px;color:gray">$!s.signerRole</span></td>
+      <td align="left" style="width:200px; vertical-align:middle;" > $s.verdict.name <br/><span style="font-size:11px;color:gray;"> #if($s.verdictTime) $calendarTool.formatDate($s.verdictTime,"yyyy-MM-dd HH:mm")#end </span></td>
+    </tr>
+  #end
+#end
+#end
+</table>
+#end
+
+#macro(renderProperties)
+#panelTitle("Document Properties")
+<table cellpadding=5>
+<tr>
+<td>
+Document:
+</td>
+<td align="right">
+*$document.titleOrName*
+</td>
+</tr>
+<tr>
+<td align="right">
+Author: 
+</td>
+<td>
+*$document.author.name*
+</td>
+</tr>
+<tr>
+<td align="right">
+Status: 
+</td>
+<td>
+*$document.status.name*
+</td>
+</tr>
+</table>
+#end
+
+
+
+#macro(documentPanel $renderProperties $renderSignatures $approvedStatusToCheck)
+<div style="border:1px solid lightgray;padding:20px">
+#if($renderProperties)
+#renderProperties()
+#end
+\\
+
+#if($approvedStatusToCheck)
+#lastApprovedVersion("approved")
+#end
+\\
+
+#if($renderSignatures)
+#renderSignatures()
+#end
+
+</div>
+#end
+
+
+#if($test)
+#documentPanel(true true "approved")
+#end
+]]></content>
+</wiki-page>

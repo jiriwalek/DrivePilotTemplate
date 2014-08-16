@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+    <field id="author">admin</field>
+    <field id="created">2013-01-09 22:56:35.750 +0100</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<h1 id="polarion_wiki macro name=module-workitem;params=id=DP-76"></h1><div id="polarion_wiki macro name=toc"></div><p id="polarion_3"></p><h2 id="polarion_wiki macro name=module-workitem;params=id=DP-536"></h2><div id="polarion_editor_html_block1" class="polarion-dle-wiki-block">
+  <div id="polarion_editor_html_block_content" contentEditable="false"></div><pre id="polarion_editor_html_block_source" class="polarion-dle-wiki-block-source" contentEditable="false">{includeForm:_default.signatures}
+</pre>
+</div><p id="polarion_5"></p><p id="polarion_6">
+  lkk
+</p><p id="polarion_1"></p><p id="polarion_2">
+  fsdfsdf
+</p><p id="polarion_4">
+  dfsdf<span id="polarion-comment:10"></span>
+</p>]]></field>
+    <field id="renderingLayouts">
+        <list>
+            <struct>
+                <item id="label">System Requirement</item>
+                <item id="layouter">paragraph</item>
+                <item id="properties">
+                    <list>
+                        <struct>
+                            <item id="key">fieldsAtStart</item>
+                            <item id="value">id</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEnd</item>
+                            <item id="value">status as image,targetVersion</item>
+                        </struct>
+                        <struct>
+                            <item id="key">fieldsAtEndAsTable</item>
+                        </struct>
+                        <struct>
+                            <item id="key">hidden</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="type">systemRequirement</item>
+            </struct>
+        </list>
+    </field>
+    <field id="signatureContexts">
+        <list>
+            <struct>
+                <item id="signatures">
+                    <list>
+                        <struct>
+                            <item id="user">walekj</item>
+                            <item id="verdict">signed</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="targetStatusId">inreview</item>
+            </struct>
+            <struct>
+                <item id="signatures">
+                    <list>
+                        <struct>
+                            <item id="user">walekj</item>
+                            <item id="verdict">rejected</item>
+                        </struct>
+                        <struct>
+                            <item id="user">rProject</item>
+                            <item id="verdict">signed</item>
+                        </struct>
+                    </list>
+                </item>
+                <item id="targetStatusId">approved</item>
+            </struct>
+        </list>
+    </field>
+    <field id="signatures" type="string"><![CDATA[
+                
+                
+                
+            ]]></field>
+    <field id="status">approved</field>
+    <field id="structureLinkRole">parent</field>
+    <field id="type">req_specification</field>
+    <field id="usesOutlineNumbering">true</field>
+</module>

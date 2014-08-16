@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module-comment>
+    <field id="author">walekj</field>
+    <field id="created">2014-07-22 13:18:33.244 +0200</field>
+    <field id="signatureData">
+        <struct>
+            <item id="targetStatusId">inreview</item>
+        </struct>
+    </field>
+    <field id="tags">
+        <list>
+            <item>signatures</item>
+        </list>
+    </field>
+    <field id="text" text-type="text/plain">rwerqwerw</field>
+</module-comment>
