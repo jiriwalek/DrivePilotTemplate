@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<workflow initial-status="draft" prototype="Module">
+    <transitions>
+        <transition action="sendtoreview" from="draft" to="inreview"/>
+        <transition action="reject" from="draft" to="rejected"/>
+        <transition action="approve" from="inreview" to="approved"/>
+        <transition action="reject" from="inreview" to="rejected"/>
+        <transition action="reject" from="approved" to="rejected"/>
+    </transitions>
+    <actions>
+        <action id="sendtoreview" name="Send to Review"/>
+        <action id="approve" name="Approve"/>
+        <action id="reject" name="Reject"/>
+    </actions>
+</workflow>

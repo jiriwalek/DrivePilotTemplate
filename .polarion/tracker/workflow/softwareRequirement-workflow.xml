@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<workflow initial-status="draft">
+    <transitions>
+        <transition action="approve" from="reviewed" to="approved"/>
+        <transition action="reject" from="reviewed" to="rejected"/>
+        <transition action="reviewed" from="draft" to="reviewed"/>
+        <transition action="makeDraft" from="reviewed" to="draft"/>
+        <transition action="reject" from="approved" to="rejected"/>
+        <transition action="reject" from="draft" to="rejected"/>
+    </transitions>
+    <actions>
+        <action id="reviewed" name="Send to approve">
+            <functions>
+                <function name="AddDefaultApprovals">
+                    <param name="approvals.roles" value="project_approver"/>
+                </function>
+            </functions>
+        </action>
+        <action id="approve" name="Approve">
+            <conditions>
+                <condition name="ApprovalState"/>
+            </conditions>
+        </action>
+        <action id="reject" name="Reject">
+            <required>
+                <field name="resolution"/>
+            </required>
+        </action>
+        <action id="makeDraft" name="Back to Draft">
+            <functions>
+                <function name="ResetApprovalsState"/>
+            </functions>
+        </action>
+    </actions>
+</workflow>

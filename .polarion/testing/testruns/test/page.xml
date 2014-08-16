@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wiki-page>
+<author>walekj</author>
+<created>20140506162852</created>
+<type>active</type>
+<content><![CDATA[1 {testrun-label}
+
+#if($testRun.records.size()==0)
+#info("Select the test cases you want to plan for execution by clicking Actions>Select Test Cases")
+#end
+
+{section:width=100%}
+{column:width=70%}
+
+{testrun-overview}
+
+
+1.1 Introduction
+{testrun-property:description}
+
+1.1 Goals
+{testrun-property:goal}
+
+1.1 Test Environment
+{table:bold=0|border=no|header=no|width=80%}
+Build Id:|{testrun-property:groupId}
+Platform:|{testrun-property:platform}
+Environment Description:|{testrun-property:environmentDescription}
+{table}
+
+1.1 Test Results
+
+#if($testRun.summaryDefect)
+1.1.1 Summary Defect
+There were too many failures so only summary defect is created: {workitem:$testRun.summaryDefect.id}
+#end
+
+1.1.1 Failed
+{testrecords:result=failed}
+
+1.1.1 Blocked
+{testrecords:result=blocked}
+
+{column}
+{column}
+{testrun-status-button}
+\\
+
+{style:type=div|class=testrun_bluepanel}
+{execute-testrun-button}
+* {export-tests}
+* {import-test-results}
+{style}
+
+{regiontitle}Activity{regiontitle}
+{activity-stream:testrun.id:"$testRun.id"}
+
+{column}
+{section}]]></content>
+</wiki-page>

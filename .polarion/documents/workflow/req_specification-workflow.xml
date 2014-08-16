@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<workflow initial-status="draft" prototype="Module">
+    <transitions>
+        <transition action="sendtoreview" from="draft" to="inreview"/>
+        <transition action="reject" from="draft" to="rejected"/>
+        <transition action="reject" from="inreview" to="rejected"/>
+        <transition action="reject" from="approved" to="rejected"/>
+        <transition action="rework" from="inreview" to="draft"/>
+        <transition action="rework" from="approved" to="draft"/>
+        <transition action="rework" from="rejected" to="draft"/>
+        <transition action="rework" from="reviewed" to="draft"/>
+        <transition action="reviewed" from="inreview" to="reviewed"/>
+        <transition action="reject" from="reviewed" to="rejected"/>
+        <transition action="approved" from="reviewed" to="approved"/>
+    </transitions>
+    <actions>
+        <action id="sendtoreview" name="Send to Review">
+            <functions>
+                <function name="InvokeAction">
+                    <param name="statusId" value="inReview"/>
+                    <param name="actionId" value="sendtoreview"/>
+                    <param name="query" value="status:draft"/>
+                </function>
+            </functions>
+        </action>
+        <action id="approved" name="Mark Approved" requires-signature="true" signature-policy="all"/>
+        <action id="reject" name="Reject"/>
+        <action id="reviewed" name="Mark Reviewed" requires-signature="true" signature-policy="atLeastOne"/>
+        <action id="rework" name="Rework"/>
+    </actions>
+</workflow>

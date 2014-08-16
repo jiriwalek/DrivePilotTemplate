@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rich-page>
+    <field id="author">walekj</field>
+    <field id="created">2014-07-22 13:15:19.964 +0200</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_1" class="polarion-rp-parameters-form-part"></div><h1 id="polarion_client2">
+  Some Title
+</h1><p id="polarion_client3"></p>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<div class="polarion-rp-column" style="width: 70%;">
+  <p id="polarion_hardcoded_2">
+  Left column
+</p><h2 id="polarion_client5">
+  TABLE
+</h2><p id="polarion_client6"></p><div id="polarion_client7" class="polarion-rp-widget-part" widget="com.polarion.table">
+  <span class="polarion-rp-widget-parameters"><span id="dataSet" label="Data Set" type="DataSet"><span id="queryType">lucene</span><span id="query">type:issue</span><span id="prototype">WorkItem</span><span id="children"><span id="columns" label="Columns" type="String">id, title, type, status, severity</span><span id="sortBy" label="Sort By" type="String"></span></span></span></span>
+</div><p id="polarion_client8"></p>
+</div>
+<div class="polarion-rp-column" style="width: 30%;">
+  <p id="polarion_hardcoded_3">
+  Right column
+</p>
+</div>
+<div class="polarion-rp-row-separator"></div><span id="polarion-rp-parameters"></span>
+]]></field>
+</rich-page>

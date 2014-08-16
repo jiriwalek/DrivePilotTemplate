@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rich-page>
+    <field id="author">lopicics</field>
+    <field id="created">2014-07-19 20:25:46.272 +0200</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <p id="polarion_1">
+  This <span style="font-weight: bold;">Rich Page</span> has no content yet.
+</p><p id="polarion_client1"></p><p id="polarion_client8"></p><h2 id="polarion_client28">
+  sinisa1
+</h2><p id="polarion_client29"></p><h3 id="polarion_client31">
+  sinisa 2
+</h3><p id="polarion_client10"></p><h4 id="polarion_client33">
+  sinisa 3
+</h4><p id="polarion_client34"></p><h5 id="polarion_client36">
+  sinisa 4
+</h5><p id="polarion_client37"></p><h6 id="polarion_client39">
+  sinisa 5
+</h6><ul id="polarion_2">
+  <li style="color: #4B5157;">better prices for Internet access during your travels abroad</li>
+  <li style="color: #4B5157;">large volume of data at a price already from 1,70 CZK without VAT for 1 megabyte</li>
+  <li style="color: #4B5157;">Choose from packages to Europe or the world</li>
+  <li style="color: #4B5157;">costs will be controlled with tools for effective management of expenditure</li>
+</ul><p id="polarion_client11"></p><p id="polarion_client12" style="margin-left: 400px;">
+  sdsdsadsa
+</p><p id="polarion_client13"></p><p id="polarion_client14"></p><p id="polarion_client15">
+  <span style="font-weight: bold;font-size: 11pt;font-family: Verdana;line-height: 1.5;">Purpose:</span>
+</p><p id="polarion_3">
+  <br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">To find a place for &quot;all Polarion team&quot; in Prague that will provide collaborative environment, keep teams together and allow us to grow in future. Our virtues like collaboration, agility and scalability should reflect new office space.</span><br/>
+  <span style="font-weight: bold;font-size: 11pt;font-family: Verdana;line-height: 1.5;">Requirements:</span><br/>
+  <span style="font-weight: bold;font-size: 11pt;font-family: Verdana;line-height: 1.5;"> Functional (High-Pri evaluation criteria):</span><br/>
+  <span style="font-size: 11pt;font-family: Verdana;line-height: 1.5;"> </span><span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">- Keep teams together:</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">- R&amp;D on same floor - 5 spaces for teams of up-to 10 persons(tems need to sit together in enclosed environment to colabarate).</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">- Possibility to have space for eventual visitors (Jiri, Jan, Robert, …)</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">- IT room (servers and storage for computer components)</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">- Support room(s). Eventually on the same floor to be well connected with Omega</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">- Support/IT teams should sit in separate rooms so they don&#39;t disturb each other</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">- Space should allow flexibility and collaboration of “open office” and team unity while in same time providing dividers (visual and sound - glass/concrete wall for instance)</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;"> - modular setup of space so we can  customise and change it based on need</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;"> - Have 3 small &quot;call rooms&quot; 6-8 m2 (2-4 people, one round desk)</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;"> - Have one medium size meeting room 30 m2 - we should have a separate room for meeting with visitors/external people</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">- UTP Cat6 cabling to all desks</span><span style="font-size: 8pt;font-family: Verdana;color: #073763;line-height: 1.5;"> (or possibility for us to redo the cabling)</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">- WiFi connectivity in place with enough enterprise level access points (or possibility for us to install our own APs</span><span style="font-size: 8pt;font-family: Verdana;color: #073763;line-height: 1.5;">) (all Polarion area)</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;"> - at least 50 Mbps  internet (1:1) (upload/download of large datasets -&gt; releases, customer dumps, etc)</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">- Separate toilets for male/female. 10-15 people/toilet(sit)</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">- Adequate Server Room </span><br/>
+</p><ul id="polarion_client22">
+  <li>Adequate Server Room (Able to fit comfortably 4 racks of servers (width should be more than 2m)<br/>
+    </li>
+  <li>min. 2 redundant, independent, enterprise level air conditioning units to keep constant low temperature<br/>
+    </li>
+  <li>Properly secured access (cards, secure doors, camera, alarm).<br/>
+    </li>
+  <li>Space for storage of Hardware components<br/>
+    </li>
+</ul><p id="polarion_client23">
+  <br/>
+  <span style="font-weight: bold;font-size: 11pt;font-family: Verdana;line-height: 1.5;">Functional (Mid-Pri evaluation criteria)</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;"> - Windows (enough light). Windows should be openable</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;"> - Airconditioning/heating available (per room if posible so each room can regulate it)</span>
+</p><p id="polarion_client24">
+  <br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;"> - Availability of parking slots (10 are minimum) - reserved/dedicated if posible</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">- Quiet environment (low level of noise outside of immediate team, helps people focus and work)</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">- Manager offices (to fit 1-2 person, for people managers to accommodate 1:1 personal meetings):</span><br/>
+</p><p id="polarion_client25">
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;"> - R&amp;D: Sinisa + …</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">- IT: Martin(?) + ...</span><br/>
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">- well connected area that has metro and/or multiple connections (closer to city center)</span><br/>
+</p><p id="polarion_client26">
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;"> - restaurants available with in vicinity (walking distance)</span><br/>
+</p><p id="polarion_client27"></p><p id="polarion_4">
+  <span style="font-size: 8pt;font-family: Verdana;line-height: 1.5;">- Secure access to the premises (doors locked with cards, 24x7 guards on the entrance, alarm etc.)</span>
+</p><p id="polarion_5"></p><div id="polarion_client2" class="polarion-rp-widget-part" widget="com.polarion.multiDataSetTrendChartWidget">
+  <span class="polarion-rp-widget-parameters"></span>
+</div><p id="polarion_client3"></p><div id="polarion_client4" class="polarion-rp-widget-part" widget="com.polarion.separateByTrendChartWidget">
+  <span class="polarion-rp-widget-parameters"><span id="title" label="Title" type="String">Chart title</span><span id="dataSet" label="Data Set" type="DataSet"><span id="queryType">lucene</span><span id="query"></span><span id="prototype">WorkItem</span><span id="children"><span id="separateBy" label="Separate By" type="SeparateBy"><span id="field"></span></span></span></span><span id="datePoints" label="Dates" type="TimePoints"><span id="from"><span id="relative">-7</span></span><span id="to"><span id="relative">0</span></span><span id="scaleType">day</span><span id="baseDate">1</span></span></span>
+</div><div id="polarion_client7" class="polarion-rp-widget-part" widget="com.polarion.table">
+  <span class="polarion-rp-widget-parameters"></span>
+</div><div id="polarion_client6" class="polarion-rp-widget-part" widget="com.polarion.intervalFieldChartWidget">
+  <span class="polarion-rp-widget-parameters"></span>
+</div><p id="polarion_client5"></p>
+</div>
+<div class="polarion-rp-row-separator"></div><span id="polarion-rp-parameters"><span id="date2" label="date2" type="Date"><span id="relative">-1</span></span><span id="sinisa2" label="sinisa2" type="String">dfdsf</span></span>
+]]></field>
+</rich-page>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plan>
+    <field id="allowedTypes">
+        <list>
+            <item>workPackage</item>
+            <item>issue</item>
+        </list>
+    </field>
+    <field id="author">admin</field>
+    <field id="calculationType">timeBased</field>
+    <field id="color">#e67e22</field>
+    <field id="created">2014-01-16 13:33:14.011 +0100</field>
+    <field id="description" text-type="text/plain">Iterations are short time frames (timeboxes) that typically last from one to four weeks. </field>
+    <field id="isTemplate">true</field>
+    <field id="name">Iteration</field>
+    <field id="prioritizationField">priority</field>
+    <field id="status">open</field>
+</plan>

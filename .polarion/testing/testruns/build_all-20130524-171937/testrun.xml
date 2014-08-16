@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<test-run>
+    <field id="template">xUnit Build Test</field>
+    <field id="selectTestCasesBy">automatedProcess</field>
+    <field id="status">failed</field>
+    <field id="type">automated</field>
+    <field id="groupId">20130524-1719</field>
+    <field id="author">admin</field>
+    <field id="created">2013-05-24 17:19:37.247 +0200</field>
+    <field id="finishedOn">2013-05-24 17:19:37.247 +0200</field>
+    <field id="records">
+        <list>
+            <struct>
+                <item id="executed">2013-05-24 17:19:37.147 +0200</item>
+                <item id="result">passed</item>
+                <item id="duration">0.0</item>
+                <item id="executedBy">admin</item>
+                <item id="testCase">DP-87</item>
+            </struct>
+            <struct>
+                <item id="executed">2013-05-24 17:19:37.157 +0200</item>
+                <item id="result">passed</item>
+                <item id="duration">0.0</item>
+                <item id="executedBy">admin</item>
+                <item id="testCase">DP-88</item>
+            </struct>
+            <struct>
+                <item id="executed">2013-05-24 17:19:37.157 +0200</item>
+                <item id="result">passed</item>
+                <item id="duration">0.0</item>
+                <item id="executedBy">admin</item>
+                <item id="testCase">DP-89</item>
+            </struct>
+            <struct>
+                <item id="executed">2013-05-24 17:19:37.207 +0200</item>
+                <item id="result">failed</item>
+                <item id="duration">0.0</item>
+                <item id="executedBy">admin</item>
+                <item id="defect">DP-85</item>
+                <item id="testCase">DP-84</item>
+                <item id="comment" text-type="text/html">&lt;b&gt;Type:&lt;/b&gt; junit.framework.AssertionFailedError&lt;br/&gt;&lt;b&gt;Message:&lt;/b&gt; Cannot login as Karl Xavier&lt;br/&gt;&lt;br/&gt;junit.framework.AssertionFailedError: Cannot login as Karl Xavier&lt;BR/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;at junit.framework.Assert.fail(Assert.java:47)&lt;BR/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;at junit.framework.Assert.assertTrue(Assert.java:20)&lt;BR/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;at com.polarion.demo.LoginTest.testLogin(LoginTest.java:12)&lt;BR/&gt;</item>
+            </struct>
+            <struct>
+                <item id="executed">2013-05-24 17:19:37.237 +0200</item>
+                <item id="result">blocked</item>
+                <item id="duration">0.0</item>
+                <item id="executedBy">admin</item>
+                <item id="testCase">DP-86</item>
+                <item id="comment" text-type="text/html">&lt;b&gt;Type:&lt;/b&gt; java.lang.RuntimeException&lt;br/&gt;&lt;b&gt;Message:&lt;/b&gt; Cannot logout, no logged in user&lt;br/&gt;&lt;br/&gt;java.lang.RuntimeException: Cannot logout, no logged in user&lt;BR/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;at com.polarion.demo.LoginTest.testLogout(LoginTest.java:16)&lt;BR/&gt;</item>
+            </struct>
+        </list>
+    </field>
+    <field id="platform" type="enum:platform"/>
+</test-run>

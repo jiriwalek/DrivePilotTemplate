@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<enumeration>
+    <option id="safari" name="safari" sortOrder="1"/>
+    <option id="chrome" name="chrome" sortOrder="2"/>
+    <option id="firefox" name="firefox" sortOrder="3"/>
+    <option id="ie" name="ie" sortOrder="4"/>
+</enumeration>

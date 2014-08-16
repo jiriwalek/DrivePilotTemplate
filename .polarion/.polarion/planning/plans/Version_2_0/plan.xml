@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plan>
+    <field id="allowedTypes">
+        <list>
+            <item>workPackage</item>
+        </list>
+    </field>
+    <field id="author">admin</field>
+    <field id="calculationType">timeBased</field>
+    <field id="created">2014-01-16 13:36:05.669 +0100</field>
+    <field id="dueDate">2014-06-30</field>
+    <field id="endDate" type="string">2014-05-30</field>
+    <field id="name">Version 2.0</field>
+    <field id="prioritizationField">priority</field>
+    <field id="records">
+        <list>
+            <struct>
+                <item id="item">DP-478</item>
+            </struct>
+            <struct>
+                <item id="item">DP-477</item>
+            </struct>
+            <struct>
+                <item id="item">DP-476</item>
+            </struct>
+            <struct>
+                <item id="item">DP-454</item>
+            </struct>
+            <struct>
+                <item id="item">DP-393</item>
+            </struct>
+            <struct>
+                <item id="item">DP-461</item>
+            </struct>
+            <struct>
+                <item id="item">DP-450</item>
+            </struct>
+        </list>
+    </field>
+    <field id="startDate">2013-12-30</field>
+    <field id="startedOn">2013-12-30 14:46:00.000 +0100</field>
+    <field id="status">inprogress</field>
+    <field id="template">release</field>
+</plan>

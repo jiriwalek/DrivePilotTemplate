@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<test-run>
+    <field id="template">System Verification Test</field>
+    <field id="selectTestCasesBy">staticLiveDoc</field>
+    <field id="status">passed</field>
+    <field id="query">status:active</field>
+    <field id="type">manual</field>
+    <field id="author">admin</field>
+    <field id="document">Requirements#System Test Specification</field>
+    <field id="created">2013-02-05 20:29:53.727 +0100</field>
+    <field id="finishedOn">2013-02-05 20:31:54.330 +0100</field>
+    <field id="records">
+        <list>
+            <struct>
+                <item id="executed">2013-02-05 20:30:36.923 +0100</item>
+                <item id="result">passed</item>
+                <item id="duration">4.214</item>
+                <item id="executedBy">admin</item>
+                <item id="testCase">DP-472</item>
+                <item id="testStepResults">
+                    <list>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                    </list>
+                </item>
+            </struct>
+            <struct>
+                <item id="executed">2013-02-05 20:30:41.182 +0100</item>
+                <item id="result">passed</item>
+                <item id="duration">2.014</item>
+                <item id="executedBy">admin</item>
+                <item id="testCase">DP-473</item>
+                <item id="testStepResults">
+                    <list>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                    </list>
+                </item>
+            </struct>
+            <struct>
+                <item id="executed">2013-02-05 20:30:46.455 +0100</item>
+                <item id="result">passed</item>
+                <item id="duration">2.68</item>
+                <item id="executedBy">admin</item>
+                <item id="testCase">DP-474</item>
+                <item id="testStepResults">
+                    <list>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                    </list>
+                </item>
+            </struct>
+            <struct>
+                <item id="executed">2013-02-05 20:31:10.276 +0100</item>
+                <item id="result">passed</item>
+                <item id="duration">7.136</item>
+                <item id="executedBy">admin</item>
+                <item id="testCase">DP-224</item>
+                <item id="testStepResults">
+                    <list>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                    </list>
+                </item>
+            </struct>
+        </list>
+    </field>
+    <field id="description" text-type="text/plain" type="text">~~Click "Properties" and provide a short description of the software being tested and the test design itself.~~</field>
+    <field id="goal" text-type="text/plain" type="text">~~Describe the hi-level goals of this test and pass/fail criteria. \\ \\ By default the System Verification Test is configured to execute all the active test cases from System Test Specification document. You can modify the test planning by adjusting "Select Test Cases" property of a test run template.~~</field>
+</test-run>

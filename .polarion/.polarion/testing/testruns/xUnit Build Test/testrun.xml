@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<test-run>
+    <field id="selectTestCasesBy">automatedProcess</field>
+    <field id="status">open</field>
+    <field id="type">automated</field>
+    <field id="author">admin</field>
+    <field id="created">2013-01-16 15:30:32.525 +0100</field>
+    <field id="isTemplate">true</field>
+    <field id="platform" type="enum:platform"/>
+</test-run>

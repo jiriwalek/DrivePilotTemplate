@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20110901103416</created>
+<type>active</type>
+<content><![CDATA[1 {testrun-label}
+
+{section:width=100%}
+{column}
+
+This is an automated test executed automatically by Polarion build tool.
+
+{testrun-overview}
+
+1.1 Environment
+
+{table:bold=0|border=no|header=no|width=80%}
+Build Id:|{testrun-property:groupId}
+Platform:|{testrun-property:platform}
+{table}
+
+1.1 Problems Found
+
+#if($testRun.summaryDefect)
+1.1.1 Summary Defect
+There were too many failures so only summary defect is created: {workitem:$testRun.summaryDefect.id}
+#end
+
+1.1.1 Failed
+{testrecords:result=failed}
+
+1.1.1 Blocked
+{testrecords:result=blocked}
+
+{column}
+{column:width=300}
+
+{testrun-status-button}
+
+{regiontitle}Activity{regiontitle}
+{activity-stream:testrun.id:"$testRun.id"}
+
+{column}
+{section}]]></content>
+</wiki-page>

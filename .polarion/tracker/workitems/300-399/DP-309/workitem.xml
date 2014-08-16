@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="assignee">sDeveloper</field>
+    <field id="author">admin</field>
+    <field id="categories">
+        <list>
+            <item>Interface</item>
+        </list>
+    </field>
+    <field id="created">2013-05-24 16:39:10.010 +0200</field>
+    <field id="description" text-type="text/html">&lt;b&gt;Test Run:&lt;/b&gt; &lt;a href="/polarion/#/project/drivepilot/testrun?id=SDVT-initial"&gt;SDVT-initial (Software Design Verification Test)&lt;/a&gt;&lt;br/&gt;&lt;table style="" cellpadding="2" cellspacing="0"&gt;&lt;tr&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff;"&gt;#&lt;/th&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff;"&gt;&lt;/th&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff; width: 30%;"&gt;Step&lt;/th&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff;"&gt;Actual Result&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;1&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&lt;img alt="passed" src="/polarion/icons/default/enums/testrun_status_passed.png" /&gt;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;Start Drive Pilot&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;2&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&lt;img alt="failed" src="/polarion/icons/default/enums/testrun_status_failed.png" /&gt;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;Connect iPad Console App&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;System error on startup&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;3&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&lt;img alt="blocked" src="/polarion/icons/default/enums/testrun_status_blocked.png" /&gt;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;Generate Code&amp;nbsp;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;4&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&lt;img alt="blocked" src="/polarion/icons/default/enums/testrun_status_blocked.png" /&gt;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;Enter Code&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;5&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&lt;img alt="blocked" src="/polarion/icons/default/enums/testrun_status_blocked.png" /&gt;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;Submit&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</field>
+    <field id="initialEstimate">1/2d</field>
+    <field id="linkedWorkItems">
+        <list>
+            <struct>
+                <item id="role">triggered_by</item>
+                <item id="suspect">false</item>
+                <item id="workItem">DP-292</item>
+            </struct>
+        </list>
+    </field>
+    <field id="priority">50.0</field>
+    <field id="remainingEstimate">1/2d</field>
+    <field id="severity">normal</field>
+    <field id="status">open</field>
+    <field id="title">Failed: Check Application requires authentication code</field>
+    <field id="type">issue</field>
+</work-item>

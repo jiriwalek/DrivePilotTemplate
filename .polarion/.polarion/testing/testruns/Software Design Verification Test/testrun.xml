@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<test-run>
+    <field id="selectTestCasesBy">staticLiveDoc</field>
+    <field id="status">open</field>
+    <field id="query">status:active</field>
+    <field id="type">manual</field>
+    <field id="author">admin</field>
+    <field id="document">Design#Software Test Specification</field>
+    <field id="created">2013-01-23 17:24:37.276 +0100</field>
+    <field id="isTemplate">true</field>
+    <field id="description" text-type="text/plain" type="text">~~Click "Properties" and provide a short description of the software being tested and the test design itself.~~</field>
+    <field id="goal" text-type="text/plain" type="text">~~Describe the hi-level goals of this test and pass/fail criteria. \\ \\ By default the SW Design Verification Test is configured to execute all the active test cases from HW Test Specification document. You can modify the test planning mode by adjusting "Select Test Cases" property of a test run template.~~</field>
+</test-run>

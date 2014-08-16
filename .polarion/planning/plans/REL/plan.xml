@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plan>
+    <field id="author">maten</field>
+    <field id="calculationType">timeBased</field>
+    <field id="created">2014-03-13 15:47:29.295 +0100</field>
+    <field id="description" text-type="text/plain">The release plan specifies which Work Items are going to be implemented for each system release and dates for those releases. These selected Work Items are then translated into individual tasks to be implemented during the iteration to complete the Work Items.</field>
+    <field id="name">REL</field>
+    <field id="prioritizationField">priority</field>
+    <field id="status">open</field>
+    <field id="template">release</field>
+</plan>

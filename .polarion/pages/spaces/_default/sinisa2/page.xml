@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rich-page>
+    <field id="author">lopicics</field>
+    <field id="created">2014-08-15 09:21:57.044 +0200</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_1" class="polarion-rp-parameters-form-part"></div><p id="polarion_hardcoded_1">
+  <br/>
+  This Rich Page has almost no content yet
+</p><p id="polarion_client7"></p><p id="polarion_client8"></p><p id="polarion_client9">
+  sewqeqwewq
+</p><p id="polarion_hardcoded_2">
+  Left column
+</p><p id="polarion_client5"></p><p id="polarion_client6">
+  <span class="polarion-rp-inline-widget" widget="com.polarion.countOfObjects"><span id="polarion-rp-widget-content"></span><span class="polarion-rp-widget-parameters"><span id="dataSet" label="Data Set" type="DataSet"><span id="queryType">lucene</span><span id="query"></span><span id="prototype">WorkItem</span></span><span id="before" label="Text before" type="String">before</span><span id="after" label="Text after" type="String">after</span></span></span>
+</p><p id="polarion_hardcoded_3">
+  Right column
+</p><p id="polarion_client1"></p><p id="polarion_client2">
+  <span class="polarion-rp-inline-widget" widget="com.polarion.countOfObjects"><span id="polarion-rp-widget-content"></span><span class="polarion-rp-widget-parameters"><span id="dataSet" label="Data Set" type="DataSet"><span id="queryType">lucene</span><span id="query"></span><span id="prototype">Plan</span></span><span id="before" label="Text before" type="String"></span><span id="after" label="Text after" type="String"></span></span></span>
+</p><p id="polarion_client4"></p><div id="polarion_client16" class="polarion-rp-widget-part" widget="com.polarion.table">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"></span>
+</div><div id="polarion_client14" class="polarion-rp-widget-part" widget="com.polarion.separateByTrendChartWidget">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"><span id="title" label="Title" type="String">Chart title</span><span id="dataSet" label="Data Set" type="DataSet"><span id="queryType">lucene</span><span id="query"></span><span id="prototype">WorkItem</span><span id="children"><span id="separateBy" label="Separate By" type="SeparateBy"><span id="field"></span></span></span></span><span id="datePoints" label="Dates" type="TimePoints"><span id="from"><span id="relative">-7</span></span><span id="to"><span id="relative">0</span></span><span id="scaleType">day</span><span id="baseDate">1</span></span></span>
+</div><p id="polarion_client15"></p>
+</div>
+<div class="polarion-rp-row-separator" page_min_width="1000"></div>
+<div class="polarion-rp-column" style="width: 100%;">
+  <p id="polarion_client23"></p><div id="polarion_client25" class="polarion-rp-widget-part" widget="com.polarion.multiDataSetTrendChartWidget">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"></span>
+</div><p id="polarion_client26"></p>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<div class="polarion-rp-column" style="width: 15.207545%;">
+  <p id="polarion_client11"></p><div id="polarion_client21" class="polarion-rp-widget-part" widget="com.polarion.table">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"></span>
+</div><p id="polarion_client22"></p>
+</div>
+<div class="polarion-rp-column" style="width: 60.74182%;">
+  <p id="polarion_client12"></p><div id="polarion_client17" class="polarion-rp-widget-part" widget="com.polarion.table">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"></span>
+</div><p id="polarion_client18"></p>
+</div>
+<div class="polarion-rp-column" style="width: 24.050632%;">
+  <p id="polarion_client13"></p><div id="polarion_client19" class="polarion-rp-widget-part" widget="com.polarion.table">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"></span>
+</div><p id="polarion_client20"></p>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<div class="polarion-rp-column" style="width: 100%;">
+  <p id="polarion_client24">
+  dsfsdfsdfsdfsd
+</p><div id="polarion_client27" class="polarion-rp-widget-part" widget="com.polarion.separateByTrendChartWidget">
+  <div id="polarion-rp-widget-content"></div><span class="polarion-rp-widget-parameters"><span id="title" label="Title" type="String">Chart title</span><span id="dataSet" label="Data Set" type="DataSet"><span id="queryType">lucene</span><span id="query"></span><span id="prototype">WorkItem</span><span id="children"><span id="separateBy" label="Separate By" type="SeparateBy"><span id="field"></span></span></span></span><span id="datePoints" label="Dates" type="TimePoints"><span id="from"><span id="relative">-7</span></span><span id="to"><span id="relative">0</span></span><span id="scaleType">day</span><span id="baseDate">1</span></span></span>
+</div><p id="polarion_client28"></p>
+</div>
+<div class="polarion-rp-row-separator"></div><span id="polarion-rp-parameters"></span>
+]]></field>
+</rich-page>

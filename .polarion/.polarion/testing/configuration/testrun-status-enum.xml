@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<enumeration>
+    <option color="#F9F9F9" default="true" iconURL="/polarion/icons/default/enums/testrun_status_inprogress.png" id="open" name="Open" sortOrder="1"/>
+    <option color="#3B9E00" iconURL="/polarion/icons/default/enums/testrun_status_passed.png" id="passed" name="Passed" sortOrder="2" terminal="true"/>
+    <option color="#C30000" iconURL="/polarion/icons/default/enums/testrun_status_failed.png" id="failed" name="Failed" sortOrder="3" terminal="true"/>
+</enumeration>

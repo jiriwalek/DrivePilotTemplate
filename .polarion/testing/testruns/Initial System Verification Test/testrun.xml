@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<test-run>
+    <field id="template">System Verification Test</field>
+    <field id="selectTestCasesBy">staticLiveDoc</field>
+    <field id="status">failed</field>
+    <field id="query">status:active</field>
+    <field id="type">manual</field>
+    <field id="author">admin</field>
+    <field id="document">Requirements#System Test Specification</field>
+    <field id="created">2013-01-16 18:17:18.583 +0100</field>
+    <field id="finishedOn">2013-02-05 20:32:01.855 +0100</field>
+    <field id="records">
+        <list>
+            <struct>
+                <item id="executed">2013-01-29 14:29:11.483 +0100</item>
+                <item id="result">failed</item>
+                <item id="duration">3.57</item>
+                <item id="executedBy">admin</item>
+                <item id="defect">DP-449</item>
+                <item id="testCase">DP-224</item>
+                <item id="testStepResults">
+                    <list>
+                        <struct>
+                            <item id="comment" text-type="text/plain">OK</item>
+                        </struct>
+                        <struct>
+                            <item id="comment" text-type="text/plain">OK</item>
+                        </struct>
+                        <struct>
+                            <item id="result">failed</item>
+                            <item id="comment" text-type="text/plain">AutoPilot is started without any warning</item>
+                        </struct>
+                    </list>
+                </item>
+            </struct>
+            <struct>
+                <item id="executed">2013-02-05 20:28:59.532 +0100</item>
+                <item id="result">passed</item>
+                <item id="duration">3.435</item>
+                <item id="executedBy">admin</item>
+                <item id="testCase">DP-472</item>
+                <item id="comment" text-type="text/html">&lt;b&gt; Retest comment: &lt;/b&gt;&lt;br&gt;</item>
+                <item id="testStepResults">
+                    <list>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                    </list>
+                </item>
+            </struct>
+            <struct>
+                <item id="executed">2013-02-05 20:28:20.875 +0100</item>
+                <item id="result">failed</item>
+                <item id="duration">2.641</item>
+                <item id="executedBy">admin</item>
+                <item id="defect">DP-475</item>
+                <item id="testCase">DP-473</item>
+                <item id="testStepResults">
+                    <list>
+                        <struct>
+                            <item id="comment" text-type="text/plain">auto pilot works</item>
+                        </struct>
+                        <struct>
+                            <item id="result">failed</item>
+                            <item id="comment" text-type="text/plain">the auto pilot continues to run</item>
+                        </struct>
+                    </list>
+                </item>
+            </struct>
+            <struct>
+                <item id="executed">2013-02-05 20:28:43.246 +0100</item>
+                <item id="result">passed</item>
+                <item id="duration">5.077</item>
+                <item id="executedBy">admin</item>
+                <item id="testCase">DP-474</item>
+                <item id="testStepResults">
+                    <list>
+                        <struct>
+                            <item id="result">passed</item>
+                            <item id="comment" text-type="text/plain">auto pilot is started</item>
+                        </struct>
+                        <struct>
+                            <item id="result">passed</item>
+                            <item id="comment" text-type="text/plain">auto pilot is stopped</item>
+                        </struct>
+                    </list>
+                </item>
+            </struct>
+        </list>
+    </field>
+    <field id="description" text-type="text/plain" type="text">~~Click "Properties" and provide a short description of the software being tested and the test design itself.~~</field>
+    <field id="goal" text-type="text/plain" type="text">~~Describe the hi-level goals of this test and pass/fail criteria. \\ \\ By default the System Verification Test is configured to execute all the active test cases from System Test Specification document. You can modify the test planning by adjusting "Select Test Cases" property of a test run template.~~</field>
+</test-run>

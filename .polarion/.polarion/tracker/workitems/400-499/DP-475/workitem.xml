@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="assignee">sDeveloper</field>
+    <field id="author">admin</field>
+    <field id="categories">
+        <list>
+            <item>Interface</item>
+        </list>
+    </field>
+    <field id="created">2013-02-05 20:28:21.016 +0100</field>
+    <field id="description" text-type="text/html">&lt;b&gt;Test Run:&lt;/b&gt; &lt;a href="/polarion/#/project/DrivePilotDemo/testrun?id=Initial System Verification Test"&gt;Initial System Verification Test (System Verification Test)&lt;/a&gt;&lt;br/&gt;&lt;table style="" cellpadding="2" cellspacing="0"&gt;&lt;tr&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff;"&gt;#&lt;/th&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff;"&gt;&lt;/th&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff; width: 30%;"&gt;Step&lt;/th&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff;"&gt;Actual Result&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;1&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&amp;nbsp;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&amp;nbsp;Install and Start DrivePilot&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;auto pilot works&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;2&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&lt;img alt="failed" src="/polarion/icons/default/enums/testrun_status_failed.png" /&gt;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&amp;nbsp;User shouts "Stop"&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;the auto pilot continues to run&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</field>
+    <field id="initialEstimate">2d</field>
+    <field id="linkedWorkItems">
+        <list>
+            <struct>
+                <item id="role">implements</item>
+                <item id="suspect">false</item>
+                <item id="workItem">DP-454</item>
+            </struct>
+            <struct>
+                <item id="role">triggered_by</item>
+                <item id="suspect">false</item>
+                <item id="workItem">DP-473</item>
+            </struct>
+        </list>
+    </field>
+    <field id="occurredInVersion" type="string">0.9.23</field>
+    <field id="previousStatus">verified-done</field>
+    <field id="priority">50.0</field>
+    <field id="remainingEstimate">2d</field>
+    <field id="severity">normal</field>
+    <field id="status">reopened</field>
+    <field id="targetVersion" type="enum:@plan[template.id:release]">Version_2_0</field>
+    <field id="title">Failed: DrivePilot will disengage when User shouts "Stop"</field>
+    <field id="type">issue</field>
+</work-item>

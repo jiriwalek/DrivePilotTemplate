@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="linkedWorkItems">
+        <list>
+            <struct>
+                <item id="workItem">DP-84</item>
+                <item id="suspect">false</item>
+                <item id="role">triggered_by</item>
+            </struct>
+        </list>
+    </field>
+    <field id="type">issue</field>
+    <field id="author">admin</field>
+    <field id="title">Failed: com.polarion.demo.LoginTest.testLogin</field>
+    <field id="created">2013-05-24 17:19:37.207 +0200</field>
+    <field id="description" text-type="text/html">&lt;b&gt;Test Run:&lt;/b&gt; &lt;a href="/polarion/#/project/drivepilot/testrun?id=build_all-20130524-171937"&gt;build_all-20130524-171937 (xUnit Build Test)&lt;/a&gt;&lt;br/&gt;&lt;b&gt;Type:&lt;/b&gt; junit.framework.AssertionFailedError&lt;br/&gt;&lt;b&gt;Message:&lt;/b&gt; Cannot login as Karl Xavier&lt;br/&gt;&lt;br/&gt;junit.framework.AssertionFailedError: Cannot login as Karl Xavier&lt;BR/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;at junit.framework.Assert.fail(Assert.java:47)&lt;BR/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;at junit.framework.Assert.assertTrue(Assert.java:20)&lt;BR/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;at com.polarion.demo.LoginTest.testLogin(LoginTest.java:12)&lt;BR/&gt;</field>
+    <field id="priority">50.0</field>
+    <field id="status">open</field>
+    <field id="severity">normal</field>
+    <field id="occurredInVersion" type="string">20130524-1719</field>
+</work-item>

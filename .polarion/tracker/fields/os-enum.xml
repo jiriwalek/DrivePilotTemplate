@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<enumeration>
+    <option id="win" name="win" sortOrder="1"/>
+    <option id="mac" name="mac" sortOrder="2"/>
+    <option id="linux" name="linux" sortOrder="3"/>
+</enumeration>

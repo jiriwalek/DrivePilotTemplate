@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wiki-page>
+<author>admin</author>
+<created>20110830110019</created>
+<type>active</type>
+<content><![CDATA[{plan-label:create-button=no}
+{section:width=100%}
+{column:width=70%}
+
+##
+## Some useful queries
+##
+#set($planQuery="PLAN:($plan.project.id/$plan.id)") 
+#set($allowedTypes =false)
+#foreach($t in $plan.allowedTypes)
+#if($allowedTypes)#set($allowedTypes ="$allowedTypes $t.id")#else#set($allowedTypes ="type:($t.id")#end
+#end
+#if($allowedTypes)#set($allowedTypes ="$allowedTypes)")#else#set($allowedTypes ="")#end
+#set($parentQ ="")
+#if($plan.parent)#if($allowedTypes.length()>0)#set($parentQ ="AND PLAN:($plan.parent.project.id/$plan.parent.id)")#else#set($parentQ ="PLAN:($plan.parent.project.id/$plan.parent.id)")#end
+#end
+
+1.1 Status - $!plan.status.name  
+<center>
+{plan-progress:width=80%}
+## we show fake chart here as there are no historical data
+##{plan-burndown:height=450|width=600|yAxisName=Working Hours}
+#includeForm("_default.${plan.id.toLowerCase()}_burndown")
+</center>
+
+{column}
+##
+##  Do not show right column when loaded from history or when exported
+##
+#if(!$request.getParameter("rev"))
+{show:wiki}
+{column}
+\\
+##
+##  Warnings
+##
+#if(!$plan.dueDate || !$plan.startDate || $plan.items.size()==0) 
+<div class="testrun_bluepanel" style="text-align:left;background-color:rgb(189,237,228);color:rgb(64,157,139);list-style-image: url('/polarion/wiki/bin/download/project/drivepilot/page/_plans/Version_2_0/bullet.png');padding-bottom:15px;line-height:25px"> 
+<span style="font-size:14px">*Next Steps*\\</span>
+#if(!$plan.dueDate || !$plan.startDate) 
+<span style="font-size:25px;font-weight:bold">&#9744;</span> <a style="color:rgb(64,157,139)" target="_top" href="/polarion/#/project/$page.project/plan?plan=$plan.id&tab=properties">Set *Start* and *Due* Date.</a>\\
+#end
+#if($plan.items.size()==0) 
+<span style="font-size:25px;font-weight:bold">&#9744;</span> <a style="color:rgb(64,157,139)" target="_top" href="/polarion/#/project/$page.project/workitems?query=$allowedTypes$parentQ&sidebar=planning&plan=$plan.id">*Add*  Work Items to the Plan.</a>\\
+#end 
+</div>\\
+#end
+
+{plan-status-button}\\
+
+<div class="testrun_bluepanel" style="text-align:left"> 
+{plan-open-in-table}
+{portallink:/project/$page.project/workitems?query=$allowedTypes$parentQ&sidebar=planning&plan=$plan.id}<span style=";padding-left:17px;font-size:14px;line-height:30px;font-weight:bold;"><img src="/polarion/ria/images/actions/create_link.gif"/> Add Work items to the Plan</span>{portallink}
+#if($plan.prioritizationField)#set($prioritizationFieldPar="&prioritization=$plan.prioritizationField")#end
+* {portallink:/workitems?query=$planQuery AND NOT HAS_VALUE:resolution&sidebar=prioritization$!prioritizationFieldPar|addcontext=yes}Prioritize Undone Items{portallink} 
+* <a href="#HPlanBoard">Plan Board</a>
+</div> 
+
+{regiontitle}Activities{regiontitle} 
+#set($wq =false)
+#foreach($w in $trackerService.queryWorkItems("project.id:$plan.project.id AND $planQuery","id"))
+  #if($wq)
+    #set($wq ="$wq $w.id")
+  #else
+    #set($wq ="workitem.id:($w.id")
+  #end
+#end
+  #if($wq)
+    #set($wq ="OR $wq )")
+  #else
+    #set($wq ="")
+  #end
+{activity-stream:activities=workitems,plans|query=plan.id:$plan.id $wq|top=3}
+{column}
+{show}
+#end
+{section}
+
+1.1 Plan Board
+{show:wiki} 
+#if($plan.prioritizationField)#set($prioritizationFieldPar="&prioritization=$plan.prioritizationField")#end
+&nbsp;&nbsp;{portallink:/workitems?query=$planQuery AND NOT HAS_VALUE:resolution&sidebar=prioritization$!prioritizationFieldPar|addcontext=yes}<img src="/polarion/ria/images/actions/prioritizePlan.png"/> *Prioritize Undone Items*{portallink} 
+&nbsp;&nbsp;&nbsp; {portallink:/project/$page.project/workitems?query=$allowedTypes$parentQ&sidebar=planning&plan=$plan.id}<img src="/polarion/ria/images/actions/create_link.gif"/> *Add Work Items to the Plan*{portallink}
+&nbsp;&nbsp;&nbsp; {portallink:/workitems?query=$planQuery|addcontext=yes}<img src="/polarion/ria/images/actions/openInTable.png"/> *Browse All Planned Items*{portallink} 
+{show}
+
+{workitems-board:columns=open as Open;inprogress,reopened as In Progress; done,rejected as Done; verified-done, verified-rejected as Verified|compact-statuses=verified-done}
+]]></content>
+</wiki-page>

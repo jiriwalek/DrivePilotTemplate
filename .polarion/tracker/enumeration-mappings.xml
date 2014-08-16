@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings>
+  <mapping id="os_-__browser" from="enum:os" to="enum:browser" name="os -&gt; browser">
+    <item from="mac" to="safari"/>
+  </mapping>
+</mappings>

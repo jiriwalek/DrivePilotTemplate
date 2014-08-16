@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<test-run>
+    <field id="selectTestCasesBy">manualSelection</field>
+    <field id="status">open</field>
+    <field id="type">manual</field>
+    <field id="groupId">- - enter build id - -</field>
+    <field id="author">admin</field>
+    <field id="created">2012-07-27 14:01:55.751 +0200</field>
+    <field id="isTemplate">true</field>
+    <field id="description" text-type="text/plain" type="text">~~Click "Properties" and provide a short description of the software being tested and the test design itself.~~</field>
+    <field id="goal" text-type="text/plain" type="text">~~Describe the hi-level goals of this test and pass/fail criteria.~~</field>
+</test-run>

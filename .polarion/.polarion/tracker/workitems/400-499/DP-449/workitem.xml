@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="assignee">pGUI</field>
+    <field id="author">admin</field>
+    <field id="categories">
+        <list>
+            <item>Interface</item>
+        </list>
+    </field>
+    <field id="created">2013-01-29 14:29:12.355 +0100</field>
+    <field id="description" text-type="text/html">&lt;b&gt;Test Run:&lt;/b&gt; &lt;a href="/polarion/#/project/DrivePilotDemo/testrun?id=Initial System Verification Test"&gt;Initial System Verification Test (System Verification Test)&lt;/a&gt;&lt;br/&gt;&lt;table style="" cellpadding="2" cellspacing="0"&gt;&lt;tr&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff;"&gt;#&lt;/th&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff;"&gt;&lt;/th&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff; width: 30%;"&gt;Step&lt;/th&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff;"&gt;Actual Result&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;1&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&amp;nbsp;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;Install the DrivePilot&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;OK&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;2&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&amp;nbsp;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;Start DrivePilot System&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;OK&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;3&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&lt;img alt="failed" src="/polarion/icons/default/enums/testrun_status_failed.png" /&gt;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;Start AutoPilot&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;AutoPilot is started without any warning&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;4&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&amp;nbsp;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;Run Tutorial&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;5&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&amp;nbsp;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;Stop Drive Pilot&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;6&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&amp;nbsp;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;Repeat initial procedure&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;7&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&amp;nbsp;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;Finish tutorial&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;8&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&amp;nbsp;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;Start AutoPilot Again&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</field>
+    <field id="initialEstimate">1d</field>
+    <field id="linkedWorkItems">
+        <list>
+            <struct>
+                <item id="role">triggered_by</item>
+                <item id="suspect">false</item>
+                <item id="workItem">DP-224</item>
+            </struct>
+        </list>
+    </field>
+    <field id="occurredInVersion" type="string">0.9.23</field>
+    <field id="previousStatus">open</field>
+    <field id="priority">50.0</field>
+    <field id="resolution">done</field>
+    <field id="resolvedOn">2013-02-05 20:39:47.624 +0100</field>
+    <field id="severity">critical</field>
+    <field id="status">verified-done</field>
+    <field id="targetVersion" type="enum:@plan[template.id:release]">Version_1_0</field>
+    <field id="timeSpent">9h</field>
+    <field id="title">Failed: A tutorial  is required before the first run..</field>
+    <field id="type">issue</field>
+</work-item>

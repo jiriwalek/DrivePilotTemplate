@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<test-run>
+    <field id="template">Software Design Verification Test</field>
+    <field id="selectTestCasesBy">staticLiveDoc</field>
+    <field id="status">failed</field>
+    <field id="query">status:active</field>
+    <field id="type">manual</field>
+    <field id="author">admin</field>
+    <field id="document">Design#Software Test Specification</field>
+    <field id="created">2013-05-24 16:32:17.918 +0200</field>
+    <field id="finishedOn">2013-05-24 16:39:52.426 +0200</field>
+    <field id="records">
+        <list>
+            <struct>
+                <item id="executed">2013-05-24 16:39:19.320 +0200</item>
+                <item id="result">failed</item>
+                <item id="duration">0.0</item>
+                <item id="executedBy">admin</item>
+                <item id="defect">DP-309</item>
+                <item id="testCase">DP-292</item>
+                <item id="comment" text-type="text/html">&lt;b&gt; Retest comment: &lt;/b&gt;&lt;br&gt;</item>
+                <item id="testStepResults">
+                    <list>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                        <struct>
+                            <item id="result">failed</item>
+                            <item id="comment" text-type="text/plain">System error on startup</item>
+                        </struct>
+                        <struct>
+                            <item id="result">blocked</item>
+                        </struct>
+                        <struct>
+                            <item id="result">blocked</item>
+                        </struct>
+                        <struct>
+                            <item id="result">blocked</item>
+                        </struct>
+                    </list>
+                </item>
+            </struct>
+        </list>
+    </field>
+    <field id="description" text-type="text/plain" type="text">~~Click "Properties" and provide a short description of the software being tested and the test design itself.~~</field>
+    <field id="goal" text-type="text/plain" type="text">~~Describe the hi-level goals of this test and pass/fail criteria. \\ \\ By default the SW Design Verification Test is configured to execute all the active test cases from HW Test Specification document. You can modify the test planning mode by adjusting "Select Test Cases" property of a test run template.~~</field>
+</test-run>

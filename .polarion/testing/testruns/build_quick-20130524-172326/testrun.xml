@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<test-run>
+    <field id="template">xUnit Build Test</field>
+    <field id="selectTestCasesBy">automatedProcess</field>
+    <field id="status">passed</field>
+    <field id="type">automated</field>
+    <field id="groupId">20130524-1723</field>
+    <field id="author">admin</field>
+    <field id="created">2013-05-24 17:23:26.183 +0200</field>
+    <field id="finishedOn">2013-05-24 17:23:26.193 +0200</field>
+    <field id="records">
+        <list>
+            <struct>
+                <item id="executed">2013-05-24 17:23:26.183 +0200</item>
+                <item id="result">passed</item>
+                <item id="duration">0.0</item>
+                <item id="executedBy">admin</item>
+                <item id="testCase">DP-87</item>
+            </struct>
+            <struct>
+                <item id="executed">2013-05-24 17:23:26.183 +0200</item>
+                <item id="result">passed</item>
+                <item id="duration">0.0</item>
+                <item id="executedBy">admin</item>
+                <item id="testCase">DP-88</item>
+            </struct>
+            <struct>
+                <item id="executed">2013-05-24 17:23:26.183 +0200</item>
+                <item id="result">passed</item>
+                <item id="duration">0.0</item>
+                <item id="executedBy">admin</item>
+                <item id="testCase">DP-89</item>
+            </struct>
+        </list>
+    </field>
+    <field id="platform" type="enum:platform"/>
+</test-run>

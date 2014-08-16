@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<enumeration>
+    <option id="version1" name="Version 1.0" sortOrder="2"/>
+    <option id="version2" name="Version 2.0" sortOrder="3"/>
+</enumeration>

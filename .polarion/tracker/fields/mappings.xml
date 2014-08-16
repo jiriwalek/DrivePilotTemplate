@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings>
+  <mapping id="os_-__browser" from="enum:os" to="enum:browser" name="os -&gt; browser">
+    <item from="mac" to="safari"/>
+    <item from="mac" to="firefox"/>
+    <item from="win" to="safari"/>
+    <item from="win" to="ie"/>
+    <item from="linux" to="chrome"/>
+    <item from="win" to="chrome"/>
+    <item from="linux" to="firefox"/>
+    <item from="mac" to="chrome"/>
+    <item from="win" to="firefox"/>
+  </mapping>
+</mappings>

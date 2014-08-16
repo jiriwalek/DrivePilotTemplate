@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rich-page>
+    <field id="author">lopicics</field>
+    <field id="created">2014-07-20 18:34:01.168 +0200</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_1" class="polarion-rp-parameters-form-part"></div><p id="polarion_hardcoded_1">
+  <br/>
+  This Rich Page has almost no content yet<br/>
+</p>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<div class="polarion-rp-column" style="width: 70%;">
+  <p id="polarion_hardcoded_2">
+  Left column
+</p><div id="polarion_client6" class="polarion-rp-widget-part" widget="com.polarion.testWidget">
+  <span class="polarion-rp-widget-parameters"></span>
+</div><div id="polarion_client4" class="polarion-rp-widget-part" widget="com.polarion.separateByTrendChartWidget">
+  <span class="polarion-rp-widget-parameters"><span id="title" label="Title" type="String">Chart title</span><span id="dataSet" label="Data Set" type="DataSet"><span id="queryType">lucene</span><span id="query"></span><span id="prototype">WorkItem</span><span id="children"><span id="separateBy" label="Separate By" type="SeparateBy"><span id="field"></span></span></span></span><span id="datePoints" label="Dates" type="TimePoints"><span id="from"><span id="relative">-7</span></span><span id="to"><span id="relative">0</span></span><span id="scaleType">day</span><span id="baseDate">1</span></span></span>
+</div><p id="polarion_client5"></p>
+</div>
+<div class="polarion-rp-column" style="width: 30%;">
+  <p id="polarion_hardcoded_3">
+  Right column
+</p><div id="polarion_client2" class="polarion-rp-widget-part" widget="com.polarion.multiDataSetTrendChartWidget">
+  <span class="polarion-rp-widget-parameters"></span>
+</div><p id="polarion_client3"></p>
+</div>
+<div class="polarion-rp-row-separator"></div><span id="polarion-rp-parameters"></span>
+]]></field>
+</rich-page>

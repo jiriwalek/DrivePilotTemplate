@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plan>
+    <field id="allowedTypes">
+        <list>
+            <item>workPackage</item>
+            <item>issue</item>
+        </list>
+    </field>
+    <field id="author">admin</field>
+    <field id="calculationType">timeBased</field>
+    <field id="capacity">175.0</field>
+    <field id="created">2014-01-16 13:42:33.331 +0100</field>
+    <field id="description" text-type="text/plain">test test</field>
+    <field id="dueDate">2014-01-10</field>
+    <field id="endDate" type="string">2014-01-10</field>
+    <field id="finishedOn">2014-01-10 00:00:00.000 +0100</field>
+    <field id="name">Iteration 33</field>
+    <field id="parent">Version_2_0</field>
+    <field id="previousTimeSpent">4d</field>
+    <field id="records">
+        <list>
+            <struct>
+                <item id="item">DP-461</item>
+            </struct>
+            <struct>
+                <item id="item">DP-450</item>
+            </struct>
+            <struct>
+                <item id="item">DP-449</item>
+            </struct>
+        </list>
+    </field>
+    <field id="startDate">2013-12-30</field>
+    <field id="startedOn">2013-12-30 00:00:00.000 +0100</field>
+    <field id="status">done</field>
+    <field id="template">iteration</field>
+</plan>

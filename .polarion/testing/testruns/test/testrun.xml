@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<test-run>
+    <field id="author">walekj</field>
+    <field id="created">2014-05-06 16:28:52.649 +0200</field>
+    <field id="description" text-type="text/plain" type="text">~~Click "Properties" and provide a short description of the software being tested and the test design itself.~~</field>
+    <field id="goal" text-type="text/plain" type="text">~~Describe the hi-level goals of this test and pass/fail criteria.~~</field>
+    <field id="groupId">- - enter build id - -</field>
+    <field id="records">
+        <list>
+            <struct>
+                <item id="comment" text-type="text/html">rwerwer&lt;br&gt;&lt;b&gt; Retest comment: &lt;/b&gt;&lt;br&gt;eqweqw</item>
+                <item id="duration">5.274</item>
+                <item id="executed">2014-05-06 16:48:42.030 +0200</item>
+                <item id="executedBy">walekj</item>
+                <item id="result">passed</item>
+                <item id="testCase">DP-474</item>
+                <item id="testCaseRevision">16346</item>
+                <item id="testStepResults">
+                    <list>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                        <struct>
+                            <item id="result">passed</item>
+                        </struct>
+                    </list>
+                </item>
+            </struct>
+            <struct>
+                <item id="comment" text-type="text/plain">wqerwe</item>
+                <item id="duration">0.0</item>
+                <item id="executed">2014-05-06 16:44:54.221 +0200</item>
+                <item id="executedBy">walekj</item>
+                <item id="result">passed</item>
+                <item id="testCase">DP-473</item>
+                <item id="testCaseRevision">16350</item>
+                <item id="testStepResults">
+                    <list>
+                        <struct>
+                            <item id="comment" text-type="text/plain">wer</item>
+                        </struct>
+                        <struct>
+                            <item id="comment" text-type="text/plain">weqrwqe</item>
+                        </struct>
+                    </list>
+                </item>
+            </struct>
+            <struct>
+                <item id="comment" text-type="text/plain">eqweqw</item>
+                <item id="defect">DP-503</item>
+                <item id="duration">0.0</item>
+                <item id="executed">2014-05-06 16:50:01.308 +0200</item>
+                <item id="executedBy">walekj</item>
+                <item id="result">failed</item>
+                <item id="testCase">DP-472</item>
+                <item id="testCaseRevision">15670</item>
+                <item id="testStepResults">
+                    <list>
+                        <struct>
+                            <item id="comment" text-type="text/plain">ewqeqw</item>
+                        </struct>
+                        <struct>
+                            <item id="comment" text-type="text/plain">ewqe</item>
+                        </struct>
+                        <struct>
+                            <item id="comment" text-type="text/plain">eqweq</item>
+                        </struct>
+                    </list>
+                </item>
+            </struct>
+            <struct>
+                <item id="testCase">DP-292</item>
+            </struct>
+            <struct>
+                <item id="testCase">DP-224</item>
+            </struct>
+        </list>
+    </field>
+    <field id="selectTestCasesBy">manualSelection</field>
+    <field id="status">open</field>
+    <field id="template">Empty</field>
+    <field id="type">manual</field>
+</test-run>

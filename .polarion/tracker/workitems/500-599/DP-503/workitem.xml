@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<work-item>
+    <field id="author">walekj</field>
+    <field id="created">2014-05-06 16:50:01.327 +0200</field>
+    <field id="description" text-type="text/html">&lt;b&gt;Test Run:&lt;/b&gt; &lt;a href="/polarion/#/project/drivepilot/testrun?id=test"&gt;test (Empty)&lt;/a&gt;&lt;br/&gt;eqweqw&lt;table style="" cellpadding="2" cellspacing="0"&gt;&lt;tr&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff;"&gt;#&lt;/th&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff;"&gt;&lt;/th&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff; width: 30%;"&gt;Step&lt;/th&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff;"&gt;Actual Result&lt;/th&gt;&lt;th style="margin: 0px; text-align: left; white-space:nowrap;background-color: #ffffff;;padding-left:40px;"&gt;Attachments&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;1&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&amp;nbsp;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&amp;nbsp;Install the Drive Pilot into a vehicle with "auto-parking"&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;ewqeqw&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;padding-left:40px;white-space:nowrap;"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;2&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&amp;nbsp;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;Start DrivePilot System&amp;nbsp;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;ewqe&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;padding-left:40px;white-space:nowrap;"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;3&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&amp;nbsp;&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;&amp;nbsp;Start AutoPilot&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;"&gt;eqweq&lt;/td&gt;&lt;td style="margin: 0px; padding: 2px; border-top:1px solid #e8ebec;padding-left:40px;white-space:nowrap;"&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</field>
+    <field id="linkedWorkItems">
+        <list>
+            <struct>
+                <item id="revision">15670</item>
+                <item id="role">triggered_by</item>
+                <item id="workItem">DP-472</item>
+            </struct>
+        </list>
+    </field>
+    <field id="occurredInVersion" type="string">- - enter build id - -</field>
+    <field id="priority">50.0</field>
+    <field id="severity">normal</field>
+    <field id="status">open</field>
+    <field id="title">Failed: DrivePilot cannot be started on vehicles with "auto-parking"</field>
+    <field id="type">issue</field>
+</work-item>

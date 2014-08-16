@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<workflow initial-action="init" initial-status="open">
+    <transitions>
+        <transition action="start_progress" from="open" to="inprogress"/>
+        <transition action="resolve" from="open" to="done"/>
+        <transition action="resolve_and_verify" from="open" to="verified-done"/>
+        <transition action="resolve" from="inprogress" to="done"/>
+        <transition action="resolve_and_verify" from="inprogress" to="verified-done"/>
+        <transition action="reopen" from="done" to="reopened"/>
+        <transition action="verifyDone" from="done" to="verified-done"/>
+        <transition action="resolve" from="reopened" to="done"/>
+        <transition action="resolve_and_verify" from="reopened" to="verified-done"/>
+        <transition action="reopen" from="verified-done" to="reopened"/>
+        <transition action="stop_progress" from="inprogress" to="open"/>
+        <transition action="reject" from="inprogress" to="rejected"/>
+        <transition action="reject_and_verify" from="inprogress" to="verified-rejected"/>
+        <transition action="reject" from="reopened" to="rejected"/>
+        <transition action="reject_and_verify" from="reopened" to="verified-rejected"/>
+        <transition action="reject" from="open" to="rejected"/>
+        <transition action="reject_and_verify" from="open" to="verified-rejected"/>
+        <transition action="reopen" from="rejected" to="reopened"/>
+        <transition action="reopen" from="verified-rejected" to="reopened"/>
+        <transition action="verifyDone" from="rejected" to="verified-rejected"/>
+    </transitions>
+    <actions>
+        <action id="init" name="Initialization">
+            <cleared>
+                <field name="resolution"/>
+            </cleared>
+            <functions>
+                <function name="LinkedWorkItemsStatusChange">
+                    <param name="back.link.roles" value="depends_on"/>
+                    <param name="link.roles" value="parent"/>
+                    <param name="valid.states" value="open,inprogress,reopened"/>
+                    <param name="target.state" value="reopened"/>
+                    <param name="clear.attribs" value="resolution"/>
+                </function>
+            </functions>
+        </action>
+        <action id="start_progress" name="Start Progress"/>
+        <action id="stop_progress" name="Stop Progress"/>
+        <action id="resolve" name="Mark Done">
+            <required>
+                <field name="resolution"/>
+                <field name="plannedIn"/>
+            </required>
+            <conditions>
+                <condition name="LinkedWorkItemsStatus">
+                    <param name="back.link.roles" value="parent"/>
+                    <param name="link.roles" value="depends_on"/>
+                    <param name="valid.states" value="resolved,closed"/>
+                </condition>
+            </conditions>
+        </action>
+        <action id="resolve_and_verify" name="Mark Verified Done">
+            <required>
+                <field name="resolution"/>
+                <field name="plannedIn"/>
+            </required>
+            <conditions>
+                <condition name="LinkedWorkItemsStatus">
+                    <param name="back.link.roles" value="parent"/>
+                    <param name="link.roles" value="depends_on"/>
+                    <param name="valid.states" value="closed"/>
+                </condition>
+            </conditions>
+        </action>
+        <action id="reopen" name="Reopen">
+            <cleared>
+                <field name="resolution"/>
+            </cleared>
+            <functions>
+                <function name="LinkedWorkItemsStatusChange">
+                    <param name="back.link.roles" value="depends_on"/>
+                    <param name="link.roles" value="parent"/>
+                    <param name="valid.states" value="open,inprogress,reopened"/>
+                    <param name="target.state" value="reopened"/>
+                    <param name="clear.attribs" value="resolution"/>
+                </function>
+            </functions>
+        </action>
+        <action id="reject" name="Reject">
+            <required>
+                <field name="resolution"/>
+            </required>
+        </action>
+        <action id="reject_and_verify" name="Mark Verified Rejected">
+            <required>
+                <field name="resolution"/>
+            </required>
+        </action>
+        <action id="verifyDone" name="Verify Done">
+            <required>
+                <field name="resolution"/>
+                <field name="plannedIn"/>
+            </required>
+        </action>
+        <action id="verifyRejected" name="Verify Rejected">
+            <required>
+                <field name="resolution"/>
+            </required>
+        </action>
+    </actions>
+</workflow>

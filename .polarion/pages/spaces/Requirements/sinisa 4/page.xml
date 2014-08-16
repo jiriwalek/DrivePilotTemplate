@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rich-page>
+    <field id="author">lopicics</field>
+    <field id="created">2014-07-21 20:43:08.335 +0200</field>
+    <field id="homePageContent" text-type="text/html"><![CDATA[<div class="polarion-rp-column" style="width: 100%;">
+  <div id="polarion_1" class="polarion-rp-parameters-form-part"></div><p id="polarion_hardcoded_1">
+  <br/>
+  This Rich Page has almost no content yet<br/>
+</p>
+</div>
+<div class="polarion-rp-row-separator"></div>
+<div class="polarion-rp-column" style="width: 70%;">
+  <p id="polarion_hardcoded_2">
+  Left column
+</p><div id="polarion_client1" class="polarion-rp-widget-part" widget="com.polarion.table">
+  <span class="polarion-rp-widget-parameters"><span id="dataSet" label="Data Set" type="DataSet"><span id="queryType">lucene</span><span id="query"></span><span id="prototype">Plan</span><span id="children"><span id="columns" label="Columns" type="String">name, id, status, created, dueDate</span><span id="sortBy" label="Sort By" type="String"></span></span></span></span>
+</div><p id="polarion_client2"></p>
+</div>
+<div class="polarion-rp-column" style="width: 30%;">
+  <p id="polarion_hardcoded_3">
+  Right column
+</p><div id="polarion_client3" class="polarion-rp-widget-part" widget="com.polarion.multiDataSetTrendChartWidget">
+  <span class="polarion-rp-widget-parameters"><span id="title" label="Title" type="String">Chart title</span><span id="data" label="Series" type="Multi"><span id="elements"><span><span id="name" label="Serie Name" type="String"></span><span id="dataSet" label="Data Set" type="DataSet"><span id="queryType">lucene</span><span id="query"></span><span id="prototype">WorkItem</span></span></span></span></span><span id="datePoints" label="Dates" type="TimePoints"><span id="from"><span id="relative">-7</span></span><span id="to"><span id="relative">0</span></span><span id="scaleType">day</span><span id="baseDate">1</span></span></span>
+</div><p id="polarion_client4"></p>
+</div>
+<div class="polarion-rp-row-separator"></div><span id="polarion-rp-parameters"><span id="date1" label="date1" type="Date"><span id="relative">0</span></span></span>
+]]></field>
+</rich-page>
